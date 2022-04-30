@@ -1,0 +1,23 @@
+{
+  "name": "deco2017-studbud-1",
+  "version": "1.0.0",
+  "description": "web application for study more efficiency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jinyumeimv/deco2017-STUDBUD.git"
+  },
+  "keywords": [
+    "plan",
+    "tasklist"
+  ],
+  "author": "Yu Jin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jinyumeimv/deco2017-STUDBUD/issues"
+  },
+  "homepage": "https://github.com/Jinyumeimv/deco2017-STUDBUD#readme"
+}
