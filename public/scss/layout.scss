@@ -1,3 +1,11 @@
-body{
-    background-color: blue;
-}
+.container {  display: grid;
+    grid-template-columns: 0.6fr 1.4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navigation task-list task-list"
+      "navigation task-list task-list"
+      "navigation task-list task-list";
+  }
+  

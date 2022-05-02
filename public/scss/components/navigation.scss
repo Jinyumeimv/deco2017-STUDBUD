@@ -1,0 +1,21 @@
+nav{
+    display: flex;
+}
+.navigation { 
+    grid-area: navigation; 
+    background-color: #C84C48;
+    color: white;
+
+    h3{
+        text-align: left; 
+        margin-left: 70px;
+    }
+}
+.navigation > h1{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.navigation > p{
+    margin-top: 180%;
+    text-align: center;
+}

@@ -1,9 +1,112 @@
-body {
-  background-color: #00f;
+.container {
+  grid-template: "navigation task-list task-list" 1fr
+                 "navigation task-list task-list" 1fr
+                 "navigation task-list task-list" 1fr
+                 / .6fr 1.4fr 1fr;
+  grid-auto-flow: row;
+  gap: 10px;
+  display: grid;
 }
 
 nav {
   display: flex;
+}
+
+.navigation {
+  color: #fff;
+  background-color: #c84c48;
+  grid-area: navigation;
+}
+
+.navigation h3 {
+  text-align: left;
+  margin-left: 70px;
+}
+
+.navigation > h1 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.navigation > p {
+  text-align: center;
+  margin-top: 180%;
+}
+
+.task-list {
+  grid-area: task-list;
+}
+
+#taskform {
+  max-width: 300px;
+  grid-area: taskform;
+  margin: 0 auto;
+}
+
+#taskform label {
+  width: 100%;
+  display: block;
+}
+
+h2 {
+  color: #c84c48;
+  margin: 1%;
+  font-size: 40px;
+}
+
+.box1, .box2, .box3 {
+  width: 32%;
+  height: 550px;
+  z-index: -1;
+  border-radius: 0% 0% 15px 15px;
+  margin: 0 .5% .5%;
+  display: inline-block;
+}
+
+.box1 {
+  opacity: .2;
+  background-color: #33658a;
+}
+
+.box2 {
+  opacity: .2;
+  background-color: #356f30;
+}
+
+.box3 {
+  opacity: .2;
+  background-color: #f77f00;
+}
+
+.box4, .box5, .box6 {
+  width: 32%;
+  height: 60px;
+  border-radius: 15px 15px 0% 0%;
+  margin: .5% .5% 0;
+  display: inline-block;
+}
+
+.box4 p, .box5 p, .box6 p {
+  color: #fff;
+  margin-left: 3%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box4 p .material-icons, .box5 p .material-icons, .box6 p .material-icons {
+  margin-left: 200px;
+}
+
+.box4 {
+  background-color: #33658a;
+}
+
+.box5 {
+  background-color: #356f30;
+}
+
+.box6 {
+  background-color: #f77f00;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
