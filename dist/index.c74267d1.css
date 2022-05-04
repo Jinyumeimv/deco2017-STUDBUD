@@ -18,9 +18,25 @@ nav {
   grid-area: navigation;
 }
 
-.navigation h3 {
-  text-align: left;
-  margin-left: 70px;
+.navigation > ul {
+  color: #fff;
+  margin: 20px 20px 20px 50px;
+  padding: 0;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+li > a {
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+li a:hover {
+  color: #fff;
+  background-color: #ab140f;
+  border-radius: 30px;
 }
 
 .navigation > h1 {
@@ -30,7 +46,7 @@ nav {
 
 .navigation > p {
   text-align: center;
-  margin-top: 180%;
+  margin-top: 140%;
 }
 
 .task-list {
@@ -107,6 +123,36 @@ h2 {
 
 .box6 {
   background-color: #f77f00;
+}
+
+h2 {
+  color: #c84c48;
+  margin: 1%;
+  font-size: 40px;
+}
+
+#searchbar {
+  width: 600px;
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  margin-top: 50px;
+  position: absolute;
+  left: 30%;
+}
+
+button {
+  width: 100px;
+  height: 55px;
+  background-color: #c84c48;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  margin-top: 50px;
+  position: absolute;
+  left: 73%;
+}
+
+button i {
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

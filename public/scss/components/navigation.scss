@@ -5,17 +5,34 @@ nav{
     grid-area: navigation; 
     background-color: #C84C48;
     color: white;
+}
 
-    h3{
-        text-align: left; 
-        margin-left: 70px;
-    }
+.navigation > ul{
+    list-style-type: none;
+    font-size: 20px;
+    color:white;
+    margin:20px;
+    margin-left: 50px;
+    padding: 0;
+}
+
+li > a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+} 
+
+li a:hover{
+    background-color: #AB140F;
+    border-radius: 30px;
+    color: white;
 }
 .navigation > h1{
   text-align: center;
   margin-bottom: 80px;
 }
 .navigation > p{
-    margin-top: 180%;
+    margin-top: 140%;
     text-align: center;
 }
