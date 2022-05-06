@@ -28,11 +28,17 @@ li a:hover{
     border-radius: 30px;
     color: white;
 }
+
 .navigation > h1{
   text-align: center;
   margin-bottom: 80px;
 }
-.navigation > p{
-    margin-top: 140%;
-    text-align: center;
+
+.navigation > #stopwatch{
+    margin-top: 130%;
+    margin-left: 40%;
+    cursor:pointer;
+    background-color: #C84C48;
+    color:white;
+    border: none;
 }

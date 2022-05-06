@@ -527,8 +527,55 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"2OD7o":[function(require,module,exports) {
 var _tasklist = require("./components/tasklist");
+var _stopwatch = require("./components/stopwatch");
 
-},{"./components/tasklist":"5i9SJ"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6"}],"5i9SJ":[function(require,module,exports) {
+
+},{}],"3fKV6":[function(require,module,exports) {
+// let popup = document.getElementById('spopup');
+// function openSpopup(){
+//     popup.classList.add("open-popup");
+// }
+// function closeSpopup(){
+//     popup.classList.remove("open-popup");
+// }
+window.onload = function() {
+    var seconds = 00;
+    var tens = 00;
+    var appendTens = document.getElementById("tens");
+    var appendSeconds = document.getElementById("seconds");
+    var buttonStart = document.getElementById('button-start');
+    var buttonStop = document.getElementById('button-stop');
+    var buttonReset = document.getElementById('button-reset');
+    var Interval;
+    buttonStart.onclick = function() {
+        clearInterval(Interval);
+        Interval = setInterval(startTimer, 10);
+    };
+    buttonStop.onclick = function() {
+        clearInterval(Interval);
+    };
+    buttonReset.onclick = function() {
+        clearInterval(Interval);
+        tens = "00";
+        seconds = "00";
+        appendTens.innerHTML = tens;
+        appendSeconds.innerHTML = seconds;
+    };
+    function startTimer() {
+        tens++;
+        if (tens <= 9) appendTens.innerHTML = "0" + tens;
+        if (tens > 9) appendTens.innerHTML = tens;
+        if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "00";
+        }
+        if (seconds > 9) appendSeconds.innerHTML = seconds;
+    }
+};
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 

@@ -18,9 +18,19 @@
         <li><a href="dictionary.html" id="dictionary"><i class="material-icons">menu_book</i>  Dictionary</a></li>
       </ul>
 
-      <p><i class="material-icons">timer</i></p>
-
+      <button type="submit" id="stopwatch" onclick="openSpopup()"><i class="material-icons">timer</i></button>
     </div>
+      <div id= "spopup">
+        <button type="button" id="close" onclick="closeSpopup()"><i class="material-icons">close</i></button>
+    
+        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+          <button id="button-start">Start</button>
+          <button id="button-stop">Stop</button>
+          <button id="button-reset">Reset</button>
+      
+    
+    </div>
+
     <div class="task-list">
       <h2>TO DO</h2>
 
