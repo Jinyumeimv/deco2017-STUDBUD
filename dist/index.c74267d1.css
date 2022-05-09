@@ -72,6 +72,7 @@ h2 {
   color: #c84c48;
   margin: 1%;
   font-size: 40px;
+  display: inline-block;
 }
 
 .box1, .box2, .box3 {
@@ -200,6 +201,47 @@ p {
   color: #000;
   margin-left: 10px;
   font-size: 55px;
+}
+
+.pomodorotimer {
+  z-index: 2;
+  background-color: #fdf5f2;
+  border-radius: 5px;
+  display: inline-block;
+  top: 0%;
+  left: 50%;
+  transform: translate(80%, -20%);
+}
+
+.pomodorotimer > p {
+  margin: -2px 30px -2px 5px;
+  font-size: 35px;
+  display: inline;
+}
+
+#times {
+  color: #fff;
+  background-color: #c84c48;
+  border: none;
+  margin-right: 100px;
+  font-size: 30px;
+  display: inline;
+}
+
+#times:hover {
+  background-color: #605f5f;
+}
+
+#full {
+  float: right;
+  color: #000;
+  background-color: #fdf5f2;
+  border: none;
+  margin: -2px 5px;
+}
+
+#full:hover {
+  color: #c84c48;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

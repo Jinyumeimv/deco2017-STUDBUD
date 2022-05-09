@@ -1,0 +1,41 @@
+.pomodorotimer{
+    display: inline-block;
+    background-color: #FDF5F2;
+    top: 0%;
+    left: 50%;
+    transform: translate(80%, -20%);
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.pomodorotimer > p{
+    display:inline;
+    font-size: 35px;
+    margin: -2px 5px;
+    margin-right: 30px;
+}
+
+#times{
+    display:inline;
+    color: white;
+    background-color: #C84C48;
+    border:none;
+    font-size: 30px;
+    margin-right: 100px;
+}
+
+#times:hover{
+     background-color: #605F5F;
+}
+
+#full{
+    float: right;
+    color: black;
+    background-color: #FDF5F2;
+    border:none;
+    margin: -2px 5px;
+}
+
+#full:hover{
+    color: #C84C48;
+}
