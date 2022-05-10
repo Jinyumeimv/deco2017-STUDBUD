@@ -1,0 +1,38 @@
+.whitenoise{
+    display: inline-block;
+    background-color: #FDF5F2;
+    top: 0%;
+    left: 50%;
+    height:70px;
+    transform: translate(110%, -10%);
+    z-index: 2;
+    border-radius: 5px;
+
+    p{
+        font-size: 20px;
+        display:inline;
+        margin-right: 10%;
+    }
+}
+
+p > img{
+    display:inline;
+    border-radius: 50%;
+    width:45px;
+    height: 45px;
+    transform: translate(0%, 20%);
+    margin-right: 2%;
+}
+
+.whitenoise > button{
+    display:inline-block;
+    color: black;
+    background-color: #FDF5F2;
+    border:none;
+    margin:-2%;
+
+}
+
+.whitenoise > button:hover{
+    color: #C84C48;
+}

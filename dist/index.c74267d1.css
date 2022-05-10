@@ -244,4 +244,42 @@ p {
   color: #c84c48;
 }
 
+.whitenoise {
+  height: 70px;
+  z-index: 2;
+  background-color: #fdf5f2;
+  border-radius: 5px;
+  display: inline-block;
+  top: 0%;
+  left: 50%;
+  transform: translate(110%, -10%);
+}
+
+.whitenoise p {
+  margin-right: 10%;
+  font-size: 20px;
+  display: inline;
+}
+
+p > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 2%;
+  display: inline;
+  transform: translate(0%, 20%);
+}
+
+.whitenoise > button {
+  color: #000;
+  background-color: #fdf5f2;
+  border: none;
+  margin: -2%;
+  display: inline-block;
+}
+
+.whitenoise > button:hover {
+  color: #c84c48;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
