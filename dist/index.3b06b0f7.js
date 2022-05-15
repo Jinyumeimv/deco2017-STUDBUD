@@ -529,26 +529,17 @@ function hmrAcceptRun(bundle, id) {
 var _tasklist = require("./components/tasklist");
 var _stopwatch = require("./components/stopwatch");
 var _pomodoro = require("./components/pomodoro");
+var _whitenoise = require("./components/whitenoise");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
-// let searchForm = document.querySelector(".spopup");
-// document.querySelector("#stopwatch").onclick = () =>{
-//     searchForm.classList.toggle("active");
-// }
 let stopWatch = document.getElementById("spopup");
 let popup = document.getElementById("stopwatch");
 popup.addEventListener("click", function() {
     console.log("lala");
     stopWatch.classList.toggle("active");
 });
-// function openSpopup(){
-//     popup.classList.add("open-popup");
-// }
-// function closeSpopup(){
-//     popup.classList.remove("open-popup");
-// }
 window.onload = function() {
     var seconds = 00;
     var tens = 00;
@@ -588,10 +579,21 @@ window.onload = function() {
 };
 
 },{}],"gk81k":[function(require,module,exports) {
-function myPomodoro() {
-    var element = document.getElementsById("pomodorotimer");
-    element.classList.toggle("pomodorotimer2");
-}
+let box = document.getElementById("pomodorotimer");
+let size = document.getElementById("fullScreen");
+let countDown = document.getElementsByTagName("p");
+size.addEventListener("click", function() {
+    console.log("lala");
+    box.classList.toggle("active");
+});
+
+},{}],"h7WhB":[function(require,module,exports) {
+let box = document.getElementById("whitenoise");
+let size = document.getElementById("full");
+size.addEventListener("click", function() {
+    console.log("lala");
+    box.classList.toggle("active");
+});
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 

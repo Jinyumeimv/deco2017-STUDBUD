@@ -212,30 +212,30 @@ p {
   font-size: 55px;
 }
 
-.pomodorotimer {
+#pomodorotimer {
   z-index: 2;
   background-color: #fdf5f2;
   border-radius: 5px;
   display: inline-block;
+  position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(80%, -20%);
 }
 
-.pomodorotimer > p {
+#pomodorotimer.active {
+  height: 500px;
+}
+
+#pomodorotimer > p {
   margin: -2px 30px -2px 5px;
   font-size: 35px;
   display: inline;
 }
 
-.pomodorotimer2 {
-  z-index: 2;
-  background-color: red;
-  border-radius: 5px;
-  display: inline-block;
-  top: 0%;
-  left: 50%;
-  transform: translate(80%, -20%);
+.timeCount {
+  text-align: center;
+  font-size: 50px;
+  display: inline;
 }
 
 #times {
@@ -251,7 +251,7 @@ p {
   background-color: #605f5f;
 }
 
-#full {
+#fullScreen {
   float: right;
   color: #000;
   background-color: #fdf5f2;
@@ -259,25 +259,30 @@ p {
   margin: -2px 5px;
 }
 
-#full:hover {
+#fullScreen:hover {
   color: #c84c48;
 }
 
-.whitenoise {
+#whitenoise {
   height: 70px;
+  width: 300px;
   z-index: 2;
   background-color: #fdf5f2;
   border-radius: 5px;
   display: inline-block;
+  position: absolute;
   top: 0%;
-  left: 50%;
-  transform: translate(110%, -10%);
+  left: 75%;
 }
 
-.whitenoise p {
+#whitenoise p {
   margin-right: 10%;
   font-size: 20px;
   display: inline;
+}
+
+#whitenoise.active {
+  height: 500px;
 }
 
 p > img {
@@ -289,7 +294,7 @@ p > img {
   transform: translate(0%, 20%);
 }
 
-.whitenoise > button {
+#whitenoise > button {
   color: #000;
   background-color: #fdf5f2;
   border: none;
@@ -297,7 +302,7 @@ p > img {
   display: inline-block;
 }
 
-.whitenoise > button:hover {
+#whitenoise > button:hover {
   color: #c84c48;
 }
 

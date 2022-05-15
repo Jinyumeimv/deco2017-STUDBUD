@@ -1,9 +1,3 @@
-// let searchForm = document.querySelector(".spopup");
-
-// document.querySelector("#stopwatch").onclick = () =>{
-//     searchForm.classList.toggle("active");
-// }
-
 let stopWatch = document.getElementById("spopup");
 let popup = document.getElementById("stopwatch");
 
@@ -11,13 +5,6 @@ popup.addEventListener("click", function(){
     console.log("lala");
     stopWatch.classList.toggle("active");
 });
-// function openSpopup(){
-//     popup.classList.add("open-popup");
-// }
-
-// function closeSpopup(){
-//     popup.classList.remove("open-popup");
-// }
 
 window.onload = function () {
   

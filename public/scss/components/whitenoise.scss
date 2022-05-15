@@ -1,10 +1,11 @@
-.whitenoise{
+#whitenoise{
     display: inline-block;
+    position: absolute;
     background-color: #FDF5F2;
     top: 0%;
-    left: 50%;
+    left: 75%;
     height:70px;
-    transform: translate(110%, -10%);
+    width:300px;
     z-index: 2;
     border-radius: 5px;
 
@@ -13,6 +14,10 @@
         display:inline;
         margin-right: 10%;
     }
+}
+
+#whitenoise.active{
+    height:500px;
 }
 
 p > img{
@@ -24,7 +29,7 @@ p > img{
     margin-right: 2%;
 }
 
-.whitenoise > button{
+#whitenoise > button{
     display:inline-block;
     color: black;
     background-color: #FDF5F2;
@@ -33,6 +38,6 @@ p > img{
 
 }
 
-.whitenoise > button:hover{
+#whitenoise > button:hover{
     color: #C84C48;
 }
