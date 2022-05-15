@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, world!</title>
+  <title>Studbud</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -18,19 +18,18 @@
         <li><a href="dictionary.html" id="dictionary"><i class="material-icons">menu_book</i>  Dictionary</a></li>
       </ul>
 
-      <button type="submit" id="stopwatch" onclick="openSpopup()"><i class="material-icons">timer</i></button>
+      <button id="stopwatch" onclick="myFunction()"><i class="material-icons">timer</i></button>
     </div>
 
     <!-- Stop watch -->
       <div id= "spopup">
-        <button type="button" id="close" onclick="closeSpopup()"><i class="material-icons">close</i></button>
+        <button id="close"><i class="material-icons">close</i></button>
     
         <p><span id="seconds">00</span>:<span id="tens">00</span></p>
           <button id="button-start">Start</button>
           <button id="button-stop">Stop</button>
           <button id="button-reset">Reset</button>
-    </div>
-
+      </div>
 
     <div class="task-list">
       <h2>TO DO</h2>
@@ -39,7 +38,7 @@
       <div class="pomodorotimer">
         <p><span id="seconds">00</span>:<span id="tens">00</span></p>
         <button type="button" id="times">x1</button>
-        <button type="button" id="full"><i class="material-icons">open_in_full</i></button>
+        <button type="button" id="full" onclick="myPomodoro()"><i class="material-icons">open_in_full</i></button>
       </div>
 
 <!-- White noise -->

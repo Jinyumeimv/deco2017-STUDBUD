@@ -1,21 +1,19 @@
 #spopup{
-    background-color: #FDF5F2;
-    top: 40%;
-    left: 50%;
+    background-color: black;
     transform: translate(100%, -120%);
     z-index: 2;
     border-radius: 5px;
-    // opacity:0;
-    // visibility:hidden;
+    opacity: 0;
 }
 
-// #stopwatch:checked ~ #spopup{
-//     opacity:1;
-//     visibility: visible;
-// }
-// .open-popup{
-//     left: 20%;
-// }
+.active{
+    background-color: #FDF5F2;
+    transform: translate(100%, -120%);
+    z-index: 2;
+    border-radius: 5px;
+    opacity: 1;
+    // transition: .4s linear;
+}
 
 #close{
     color: #C84C48;

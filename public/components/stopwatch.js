@@ -1,5 +1,13 @@
-// let popup = document.getElementById('spopup');
+// let searchForm = document.querySelector(".spopup");
 
+// document.querySelector("#stopwatch").onclick = () =>{
+//     searchForm.classList.toggle("active");
+// }
+
+function myFunction(){
+var element = document.getElementsById("spopup");
+element.classList.toggle("active");
+}
 // function openSpopup(){
 //     popup.classList.add("open-popup");
 // }

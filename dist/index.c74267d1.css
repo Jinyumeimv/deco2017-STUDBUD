@@ -53,6 +53,10 @@ li a:hover {
   margin-left: 40%;
 }
 
+.navigation > #stopwatch:hover {
+  color: #000;
+}
+
 .task-list {
   grid-area: task-list;
 }
@@ -161,10 +165,17 @@ h2 {
 
 #spopup {
   z-index: 2;
+  opacity: 0;
+  background-color: #000;
+  border-radius: 5px;
+  transform: translate(100%, -120%);
+}
+
+.active {
+  z-index: 2;
+  opacity: 1;
   background-color: #fdf5f2;
   border-radius: 5px;
-  top: 40%;
-  left: 50%;
   transform: translate(100%, -120%);
 }
 
@@ -217,6 +228,16 @@ p {
   margin: -2px 30px -2px 5px;
   font-size: 35px;
   display: inline;
+}
+
+.pomodorotimer2 {
+  z-index: 2;
+  background-color: red;
+  border-radius: 5px;
+  display: inline-block;
+  top: 0%;
+  left: 50%;
+  transform: translate(80%, -20%);
 }
 
 #times {

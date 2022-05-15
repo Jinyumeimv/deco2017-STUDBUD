@@ -528,11 +528,19 @@ function hmrAcceptRun(bundle, id) {
 },{}],"2OD7o":[function(require,module,exports) {
 var _tasklist = require("./components/tasklist");
 var _stopwatch = require("./components/stopwatch");
+var _pomodoro = require("./components/pomodoro");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
-// let popup = document.getElementById('spopup');
+// let searchForm = document.querySelector(".spopup");
+// document.querySelector("#stopwatch").onclick = () =>{
+//     searchForm.classList.toggle("active");
+// }
+function myFunction() {
+    var element = document.getElementsById("spopup");
+    element.classList.toggle("active");
+}
 // function openSpopup(){
 //     popup.classList.add("open-popup");
 // }
@@ -576,6 +584,12 @@ window.onload = function() {
         if (seconds > 9) appendSeconds.innerHTML = seconds;
     }
 };
+
+},{}],"gk81k":[function(require,module,exports) {
+function myPomodoro() {
+    var element = document.getElementsById("pomodorotimer");
+    element.classList.toggle("pomodorotimer2");
+}
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 

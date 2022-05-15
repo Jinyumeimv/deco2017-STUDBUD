@@ -15,6 +15,16 @@
     margin-right: 30px;
 }
 
+.pomodorotimer2{
+    display: inline-block;
+    background-color: red;
+    top: 0%;
+    left: 50%;
+    transform: translate(80%, -20%);
+    z-index: 2;
+    border-radius: 5px; 
+}
+
 #times{
     display:inline;
     color: white;
