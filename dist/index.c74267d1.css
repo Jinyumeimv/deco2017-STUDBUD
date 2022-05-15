@@ -165,18 +165,16 @@ h2 {
 
 #spopup {
   z-index: 2;
-  opacity: 0;
-  background-color: #000;
-  border-radius: 5px;
-  transform: translate(100%, -120%);
-}
-
-.active {
-  z-index: 2;
-  opacity: 1;
+  visibility: hidden;
   background-color: #fdf5f2;
   border-radius: 5px;
-  transform: translate(100%, -120%);
+  position: absolute;
+  top: 430px;
+  left: 290px;
+}
+
+#spopup.active {
+  visibility: visible;
 }
 
 #close {

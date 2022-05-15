@@ -537,10 +537,12 @@ var _pomodoro = require("./components/pomodoro");
 // document.querySelector("#stopwatch").onclick = () =>{
 //     searchForm.classList.toggle("active");
 // }
-function myFunction() {
-    var element = document.getElementsById("spopup");
-    element.classList.toggle("active");
-}
+let stopWatch = document.getElementById("spopup");
+let popup = document.getElementById("stopwatch");
+popup.addEventListener("click", function() {
+    console.log("lala");
+    stopWatch.classList.toggle("active");
+});
 // function openSpopup(){
 //     popup.classList.add("open-popup");
 // }
