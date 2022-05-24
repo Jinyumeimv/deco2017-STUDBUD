@@ -4,26 +4,90 @@ h2{
     margin:1%;
 }
 
-#searchbar{
-    position:absolute;
-    left:30%;
-    border-radius: 10px 0 0 10px;
-    margin-top: 50px;
-    width: 600px;
-    height:50px;
+#searchbox{
+    width:400px;
+    // background-color: black;
 }
 
-.search{
-    position:absolute;
-    left: 73%;
-    margin-top: 50px;
+#searchBar{
+    display:flex;
+    margin-top:30px;
+    width:1000px;
+}
+
+#searchbar{
+    border-radius: 10px 0 0 10px;
+    width: 850px;
+    height:50px;
+    border-color:#C4C4C4;
+}
+
+#search{
+    // left: 90%;
     width: 100px;
     height:55px; 
-    background-color:#C84C48;
+    background-color: #C84C48;
     border:none;
     border-radius: 0 10px 10px 0;
 
     i{
     color: white;
     }
+}
+
+#search:hover{
+    background-color: #932825;
+}
+
+#word{
+    font-size: 30px;;
+}
+
+#property{
+    font-size:20px;
+    color: #C84C48;
+}
+
+#sound{
+    height:35px;
+    margin:10px;
+}
+
+#mean{
+    font-size:20px;
+}
+
+#synonym{
+    font-size:23px;
+    font-weight: bold;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+#synonyms{
+    display: flex;
+}
+
+#synonym_1{
+    font-size:18px;
+    background-color: #C84C48;
+    color:white;
+    border-radius: 25px;
+    padding:10px;
+}
+
+#synonym_2{
+    font-size:18px;
+    background-color: #C84C48;
+    color:white;
+    border-radius: 25px;
+    padding:10px;
+}
+
+#synonym_3{
+    font-size:18px;
+    background-color: #C84C48;
+    color:white;
+    border-radius: 25px;
+    padding:10px;
 }

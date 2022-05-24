@@ -14,23 +14,42 @@
     <div class="navigation">
       <h1>Studbud</h1>
       <ul>
-        <li><a href="/index.html"><i class="material-icons">list_alt</i>  To do</a></li>
-        <li><a href="/dictionary.html"><i class="material-icons">menu_book</i>  Dictionary</a></li>
+        <li><a href="/index.html" id="todo"><i class="material-icons">list_alt</i>  To do</a></li>
+        <li><a href="/dictionary.html" id="dictionary"><i class="material-icons">menu_book</i>  Dictionary</a></li>
       </ul>
 
-      <p><i class="material-icons">timer</i></p>
+      <button id="stopwatch"><i class="material-icons">timer</i></button>
     </div>
 
-    <div class="searchbox">
-        <h2>Dictionary</h2>
-        <form>
-            <input type="text" name="Searchbar" id="searchbar" placeholder="Search words">
-            <button type="submit" id="search"><i class="material-icons">search</i></button>
-        </form>
+    <div id="searchbox">
 
-        
+      <div id="dictionary">
+        <h2>DICTIONARY</h2>
+      </div>
+
+      <div id="searchBar">
+          <input type="text" name="Searchbar" id="searchbar" placeholder="Search words">
+          <button type="submit" id="search"><i class="material-icons">search</i></button>
+      </div>
+
+      <div id="content">
+        <p id="word">HTML</p>
+        <p id="property">HTML</p>
+        <button id="sound"><i class="material-icons">volume_up</i></button>
+        <p id="mean">Meaning</p>
+        <p id="synonym">Synonyms</p>
+        <div id="synonyms">
+          <p id="synonym_1">Synonyms</p>
+          <p id="synonym_2">Synonyms</p>
+          <p id="synonym_3">Synonyms</p>
+        </div>
+      </div>
 
     </div>
+   
+
+
   </div>
+
 <script src="/dictionary.a66f5b77.js"></script></body>
 </html>
