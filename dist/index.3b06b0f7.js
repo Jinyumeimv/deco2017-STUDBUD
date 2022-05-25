@@ -530,8 +530,9 @@ var _tasklist = require("./components/tasklist");
 var _stopwatch = require("./components/stopwatch");
 var _pomodoro = require("./components/pomodoro");
 var _whitenoise = require("./components/whitenoise");
+var _dictionary = require("./components/dictionary");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
 let stopWatch = document.getElementById("spopup");
@@ -593,6 +594,17 @@ let size = document.getElementById("full");
 size.addEventListener("click", function() {
     console.log("lala");
     box.classList.toggle("active");
+});
+
+},{}],"7HJAV":[function(require,module,exports) {
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+const result = document.getElementById("content");
+const pronounce = document.getElementById("pronounce");
+const searchBar = document.getElementById("search_bar");
+const btn = document.getElementById("search");
+btn.addEventListener("click", ()=>{
+    let inputWord = searchBar.value;
+    console.log(inputWord);
 });
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
