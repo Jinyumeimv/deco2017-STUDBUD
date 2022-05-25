@@ -535,8 +535,59 @@ var _dictionary = require("./components/dictionary");
 },{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
+let stopWatch = document.getElementById("spopup");
+let popup = document.getElementById("stopWatch");
+popup.addEventListener("click", function() {
+    console.log("lala");
+    stopWatch.classList.toggle("active");
+});
+window.onload = function() {
+    var seconds = 00;
+    var tens = 00;
+    var appendTens = document.getElementById("tens");
+    var appendSeconds = document.getElementById("seconds");
+    var buttonStart = document.getElementById('button-start');
+    var buttonStop = document.getElementById('button-stop');
+    var buttonReset = document.getElementById('button-reset');
+    var Interval;
+    buttonStart.onclick = function() {
+        clearInterval(Interval);
+        Interval = setInterval(startTimer, 10);
+        console.log(a);
+    };
+    buttonStop.onclick = function() {
+        clearInterval(Interval);
+    };
+    buttonReset.onclick = function() {
+        clearInterval(Interval);
+        tens = "00";
+        seconds = "00";
+        appendTens.innerHTML = tens;
+        appendSeconds.innerHTML = seconds;
+    };
+    function startTimer() {
+        tens++;
+        if (tens <= 9) appendTens.innerHTML = "0" + tens;
+        if (tens > 9) appendTens.innerHTML = tens;
+        if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "00";
+        }
+        if (seconds > 9) appendSeconds.innerHTML = seconds;
+    }
+};
 
 },{}],"gk81k":[function(require,module,exports) {
+let box = document.getElementById("pomodorotimer");
+let size = document.getElementById("fullScreen");
+let countDown = document.getElementsByTagName("p");
+size.addEventListener("click", function() {
+    // console.log("lala");
+    box.classList.toggle("active");
+});
 
 },{}],"h7WhB":[function(require,module,exports) {
 

@@ -44,7 +44,7 @@ li a:hover {
   margin-bottom: 80px;
 }
 
-.navigation > #stopwatch {
+.navigation > #stopWatch {
   cursor: pointer;
   color: #fff;
   background-color: #c84c48;
@@ -53,7 +53,7 @@ li a:hover {
   margin-left: 40%;
 }
 
-.navigation > #stopwatch:hover {
+.navigation > #stopWatch:hover {
   color: #000;
 }
 

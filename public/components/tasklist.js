@@ -68,5 +68,5 @@
 //       })
 //       form.reset();
 //   }
-  //console.log(taskName);
-  //addTask(taskName, "More details", "Type of the task", "BJT", "15/4", 3, false, false, true);
+//   console.log(taskName);
+//   addTask(taskName, "More details", "Type of the task", "BJT", "15/4", 3, false, false, true);
