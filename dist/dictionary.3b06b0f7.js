@@ -543,7 +543,7 @@ var _dictionary = require("./components/dictionary");
 },{}],"7HJAV":[function(require,module,exports) {
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("content");
-const pronounce = document.getElementById("pronounce");
+const sound = document.getElementById("pronounce");
 const searchBar = document.getElementById("search_bar");
 const btn = document.getElementById("search");
 btn.addEventListener("click", ()=>{
@@ -555,7 +555,9 @@ btn.addEventListener("click", ()=>{
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
-        <button id="sound"><i class="material-icons">volume_up</i></button>
+        <button id="sound" click ="playSound">
+        <i class="material-icons">volume_up</i>
+        </button>
         <p id="mean">${data[0].meanings[0].definitions[0].definition}</p>
         <p id="synonym">Synonyms</p>
         <div id="synonyms">
@@ -563,8 +565,13 @@ btn.addEventListener("click", ()=>{
           <p id="synonym_2">${data[0].meanings[0].synonyms[1]}</p>
           <p id="synonym_3">${data[0].meanings[0].synonyms[2]}</p>
         </div>`;
+        sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
+        console.log(sound);
     });
 });
+function playSound() {
+    sound.play();
+}
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 
