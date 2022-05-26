@@ -34,20 +34,70 @@
     </div>
 
 <!-- Pomodoro timer -->
-    <div id="pomodorotimer">
-      <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-      <button type="button" id="times">x1</button>
-      <button type="button" id="fullScreen"><i class="material-icons">open_in_full</i></button>
-    </div>
+<div id="pomodorotimer_1">
+  <p id="focus"><span id="f_minutes">25</span>:<span id="f_seconds">00</span></p>
+  <!-- <p><span id="seconds">00</span>:<span id="tens">00</span></p> -->
+  <!-- <button type="button" id="times_1">x1</button> -->
+  <button type="button" id="full_screen"><i class="material-icons">open_in_full</i></button>
+</div>
+
+
+<div id="pomodorotimer" class="timer">
+  <!-- <p id=focus><span id="f_minutes">00</span>:<span id="f_seconds">10</span></p> -->
+   
+  <p id="break"><span id="b_minutes">5</span>:<span id="b_seconds">00</span></p>
+   
+  <button id="times">x1</button>
+   <img src="/pomodoro.31fbc21c.png" alt="tomato_img" id="tomato_img">
+  <span id="cycle">0</span>
+   <button id="start">START</button>
+   <button id="giveup">GIVE UP</button>
+  <!-- <button id="fullScreen"><i class="material-icons">open_in_full</i></button> -->
+ </div>
+
+
 
 <!-- White noise -->
-    <div id="whitenoise">
-      <p><img src="/sunset.775db9ec.png" alt="sunset image">Sunset</p>
-      <button type="button" id="previous"><i class="material-icons">skip_previous</i></button>
-      <button type="button" id="pause"><i class="material-icons">pause_circle</i></button>
-      <button type="button" id="next"><i class="material-icons">skip_next</i></button>
-      <button type="button" id="full"><i class="material-icons">open_in_full</i></button>
+<div id="whitenoise_1">
+  <!-- <p><img src="./sunset.png" alt="sunset image" id="">Sunset</p> -->
+  <!-- <button type="button" id="previous"><i class="material-icons">skip_previous</i></button>
+  <button type="button" id="pause"><i class="material-icons">pause_circle</i></button>
+  <button type="button" id="next"><i class="material-icons">skip_next</i></button> -->
+  <button type="button" id="big"><i class="material-icons">open_in_full</i></button>
+</div>
+
+
+<div id="whitenoise">
+  <div id="top_bar">
+    <span id="function_name">White noise</span>
+    <i id="musiclist" class="material-icons">queue_music</i>
+  </div>
+
+  <div id="img_area">
+    <img src="/rainimg.9fa865b9.png" alt="whitenoise_image" id="whitenoise_img">
+  </div>
+
+  <div id="wn_name">
+    <p id="whitename"></p>
+  </div>
+
+  <div id="progress">
+    <div id="progressbar"></div>
+  </div>
+
+  <div id="buttons">
+    <i id="like" class="material-icons">favorite</i>
+    <i id="previous" class="material-icons">skip_previous</i>
+    <div id="play">
+    <i class="material-icons">play_circle</i>
     </div>
+<!--     <i id="play" class="material-icons">pause_circle</i> -->
+    <i id="next" class="material-icons">skip_next</i>
+    <i id="mode" class="material-icons">shuffle</i>
+  </div>
+  <audio id="audio"></audio>
+</div>
+
 
 <!-- dictionary -->
     <div id="searchbox">
@@ -58,7 +108,7 @@
 
       <div id="searchBar">
           <input type="text" name="Searchbar" id="search_bar" placeholder="Search words...">
-          <button id="search"><i class="material-icons">search</i></button>
+          <button id="check"><i class="material-icons">search</i></button>
       </div>
 
       <div id="content">

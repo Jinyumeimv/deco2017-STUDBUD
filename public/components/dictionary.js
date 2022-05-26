@@ -2,7 +2,7 @@ const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("content");
 const sound = document.getElementById("pronounce");
 const searchBar = document.getElementById("search_bar");
-const btn = document.getElementById("search");
+const btn = document.getElementById("check");
 
 btn.addEventListener("click", () => {
     let inputWord = searchBar.value;
@@ -31,6 +31,6 @@ btn.addEventListener("click", () => {
 });
 
 
-function playSound(){
-    sound.play();
-};
+// function playSound(){
+//     sound.play();
+// };

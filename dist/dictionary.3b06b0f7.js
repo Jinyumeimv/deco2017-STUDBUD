@@ -531,8 +531,9 @@ var _stopwatch = require("./components/stopwatch");
 var _pomodoro = require("./components/pomodoro");
 var _whitenoise = require("./components/whitenoise");
 var _dictionary = require("./components/dictionary");
+var _musicList = require("./components/musicList");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV","./components/musicList":"e12Z3"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
 let stopWatch = document.getElementById("spopup");
@@ -582,21 +583,152 @@ window.onload = function() {
 
 },{}],"gk81k":[function(require,module,exports) {
 let box = document.getElementById("pomodorotimer");
-let size = document.getElementById("fullScreen");
+let size = document.getElementById("full_screen");
 let countDown = document.getElementsByTagName("p");
 size.addEventListener("click", function() {
-    // console.log("lala");
+    console.log("lala");
     box.classList.toggle("active");
 });
+var start = document.getElementById("start");
+var giveUp = document.getElementById("giveup");
+var focusMins = document.getElementById("f_minutes");
+var breakMins = document.getElementById("b_minutes");
+var focusSec = document.getElementById("f_seconds");
+var breakSec = document.getElementById("b_seconds");
+var cycles = document.getElementById("cycle");
+var startTimer;
+start.addEventListener('click', function() {
+    if (startTimer === undefined) startTimer = setInterval(timer, 1000);
+    else {
+        alert("Timer is already running");
+        console.log(lala);
+    }
+});
+giveUp.addEventListener('click', function() {
+    focusMins.innerText = 25;
+    focusSec.innerText = "00";
+    breakMins.innerText = 5;
+    breakSec.innerText = "00";
+    stopInterval();
+    startTimer = undefined;
+    console.log(hehe);
+});
+function timer() {
+    if (focusSec.innerText != 0) focusSec.innerText--;
+    else if (focusMins.innerText != 0 && focusSec.innerText == 0) {
+        focusSec.innerText = 59;
+        focusMins.innerText--;
+    }
+    if (focusMins.innerText == 0 && focusSec.innerText == 0) // if(breakSec.innerText !=0){
+    breakSec.innerText--;
+    else if (breakMins.innertext != 0 && breakSec.innerText == 0) {
+        breakSec.innerText = 59;
+        breakMins.innerText--;
+    }
+    if (focusMins.innerText == 0 && focusSec.innerText == 0 && breakMins.innerText == 0 && breakSec.innerText == 0) {
+        focusMins.innerText = 25;
+        focusSec.innerText = "00";
+        breakMins.innerText = 5;
+        breakSec.innerText = "00";
+        cycles.innerText++;
+    }
+}
+function stopInterval() {
+    clearInterval(startTimer);
+}
 
 },{}],"h7WhB":[function(require,module,exports) {
+let AllWhiteNoise = [
+    {
+        name: "Falme",
+        img: "sunset.png",
+        music: "Flame.mp3"
+    },
+    {
+        name: "Rain",
+        img: "rainimg.png",
+        music: "rain.mp3"
+    },
+    {
+        name: "Sea Waves",
+        img: "sea.png",
+        music: "sea.mp3"
+    }
+];
+let box = document.getElementById("whitenoise");
+let size = document.getElementById("big");
+size.addEventListener("click", function() {
+    console.log("lala");
+    box.classList.toggle("active");
+});
+const whiteNoise = document.querySelector("#whitenoise");
+whiteNoiseImg = whiteNoise.querySelector("#img_area > img");
+whiteNoiseName = whiteNoise.querySelector("#whitename");
+whiteNoiseSound = whiteNoise.querySelector("#audio");
+playBtn = whiteNoise.querySelector("#play");
+previousBtn = whiteNoise.querySelector("#previous");
+nextBtn = whiteNoise.querySelector("#next");
+progressArea = whiteNoise.querySelector("#progress");
+progressBar = whiteNoise.querySelector("#progressbar");
+let musicIndex = 1;
+//   let AllWhiteNoise;
+window.addEventListener("load", ()=>{
+    loadMusic(musicIndex);
+});
+function loadMusic(indexNum) {
+    whiteNoiseName.innerText = AllWhiteNoise[indexNum - 1].name;
+    whiteNoiseImg.src = `./images/${AllWhiteNoise[indexNum - 1].img}`;
+    whiteNoiseSound.src = `${AllWhiteNoise[indexNum - 1].music}`;
+}
+function previousWhiteNoise() {
+    musicIndex--;
+    loadMusic(musicIndex);
+    playMusic();
+}
+function nextWhiteNoise() {
+    musicIndex++;
+    loadMusic(musicIndex);
+    playMusic();
+}
+function playMusic() {
+    whiteNoise.classList.add("paused");
+    playBtn.querySelector("i").innerText = "pause_circle";
+    whiteNoiseSound.play();
+}
+function pauseMusic() {
+    whiteNoise.classList.remove("paused");
+    playBtn.querySelector("i").innerText = "play_circle";
+    whiteNoiseSound.pause();
+}
+playBtn.addEventListener("click", ()=>{
+    const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
+    isWhiteNoisePaused ? pauseMusic() : playMusic();
+});
+previousBtn.addEventListener("click", ()=>{
+    previousWhiteNoise();
+});
+nextBtn.addEventListener("click", ()=>{
+    nextWhiteNoise();
+});
+whiteNoiseSound.addEventListener("timeupdate", (e)=>{
+    console.log(e);
+    const currentTime = e.target.currentTime;
+    const duration = e.target.duration;
+    let progressWidth = currentTime / duration * 100;
+    progressBar.style.width = `${progressWidth}%`;
+});
+// I want to adding some js to adjust the progress bar, but I didn't make it.
+progressArea.addEventListener("click", (e)=>{
+    let clickedOffSetX = e.offsetX;
+    whiteNoiseSound.currentTime = clickedOffSetX;
+});
 
 },{}],"7HJAV":[function(require,module,exports) {
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("content");
 const sound = document.getElementById("pronounce");
 const searchBar = document.getElementById("search_bar");
-const btn = document.getElementById("search");
+const btn = document.getElementById("check");
 btn.addEventListener("click", ()=>{
     let inputWord = searchBar.value;
     console.log(inputWord);
@@ -619,10 +751,28 @@ btn.addEventListener("click", ()=>{
         sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
         console.log(sound);
     });
-});
-function playSound() {
-    sound.play();
-}
+}); // function playSound(){
+ //     sound.play();
+ // };
+
+},{}],"e12Z3":[function(require,module,exports) {
+let AllWhiteNoise = [
+    {
+        name: "Falme",
+        img: "./sunset.png",
+        music: "./Flame.mp3"
+    },
+    {
+        name: "Rain",
+        img: "./rainimg.png",
+        music: "rain.mp3"
+    },
+    {
+        name: "Sea Waves",
+        img: "./sea.png",
+        music: "./sea.mp3"
+    }
+];
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 

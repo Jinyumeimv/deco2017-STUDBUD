@@ -1,4 +1,4 @@
-#pomodorotimer{
+#pomodorotimer_1{
     display: inline;
     position: absolute;
     background-color: #FDF5F2;
@@ -6,10 +6,12 @@
     left: 50%;
     z-index: 2;
     border-radius: 5px;
+    height:80px;
+    width:250px;
 }
 
 #pomodorotimer.active{
-    height: 500px;
+    visibility: visible;
 }
 
 
@@ -20,12 +22,12 @@
 //     margin-right: 30px;
 // }
 
-#pomodorotimer > p{
+#pomodorotimer_1 > p{
     // display:inline;
     position:absolute;
     height:90px;
     top:20%;
-    left:auto;
+    left:60px;
     font-size: 50px;
     margin: auto;
     text-align: center;
@@ -37,7 +39,7 @@
 //     font-size: 50px;
 // }
 
-#times{
+#times_1{
     // display:inline;
     color: white;
     background-color: #C84C48;
@@ -46,7 +48,7 @@
     margin-right: 100px;
 }
 
-#times:hover{
+#times_1:hover{
      background-color: #605F5F;
 }
 
@@ -61,3 +63,106 @@
 #fullScreen:hover{
     color: #C84C48;
 }
+
+
+
+
+#pomodorotimer{
+    display:flex;
+    position:absolute;
+    width: 250px;
+    height: 350px;
+    left: 50%;
+    top:-20px;
+    background: #FDF5F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1;
+    visibility: hidden;
+  }
+  
+  #focus{
+    position: absolute;
+    left:50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 55px;
+    line-height: 67px;
+    color: #000000;
+  }
+  
+  #break{
+    position: absolute;
+    left:75px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 200px;
+    color: #000000;
+  }
+  
+  #times{
+  /*   display:flex; */
+    position:relative;
+    height:30px;
+    width:30px;
+    left:115px;
+    top: 170px;
+    background-color: #C84C48;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size:20px;
+  }
+  
+  #cycle{
+    position: absolute;
+    left:150px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 450px;
+    color: #000000;
+  }
+  
+  #tomato_img{
+    position:absolute;
+    height:100px; 
+    width:100px;
+    left:50px;
+    top:175px;
+  }
+  
+  #start{
+    position:relative;
+    left:0px;
+    top: 260px;
+    width:100px;
+    height:30px;
+    background-color: #C84C48;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size:20px;
+  }
+  
+  #giveup{
+    position:relative;
+    left:15px;
+    top: 260px;
+    width:100px;
+    height:30px;
+    background-color: #C84C48;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size:20px;
+  }
+  
+  #fullScreen{
+    display:inline;
+    float:right;
+  }

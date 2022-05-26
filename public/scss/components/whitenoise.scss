@@ -1,4 +1,4 @@
-#whitenoise{
+#whitenoise_1{
     display: inline-block;
     position: absolute;
     background-color: #FDF5F2;
@@ -17,7 +17,7 @@
 }
 
 #whitenoise.active{
-    height:500px;
+  visibility: visible;
 }
 
 p > img{
@@ -29,7 +29,7 @@ p > img{
     margin-right: 2%;
 }
 
-#whitenoise > button{
+#whitenoise_1 > button{
     display:inline-block;
     color: black;
     background-color: #FDF5F2;
@@ -38,6 +38,110 @@ p > img{
 
 }
 
-#whitenoise > button:hover{
+#whitenoise_1 > button:hover{
     color: #C84C48;
 }
+
+
+
+
+
+#whitenoise{
+    display: inline-block;
+    position: absolute;
+    background-color: #FDF5F2;
+    border-radius:5px;
+    padding:5px 30px;
+    height:420px;
+    width:240px;
+    top: 5%;
+    left: 75%;
+    z-index: 2;
+    visibility: hidden;
+  }
+  
+  #top_bar, #time, #buttons{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+  #function_name{
+    font-size:30px;
+    margin:10px auto;
+  }
+  
+  #musiclist{
+    float:right;
+    margin-left:20px;
+  }
+  
+  #musiclist:hover{
+    color:#C84C48;
+  }
+  
+  #img_area{
+    border-radius:300px;
+    height:220px;
+    width:100%;
+  }
+
+  #img_area > img{
+    border-radius:300px;
+    height:220px;
+    width:100%;
+  }
+  
+  #whitename{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin:5px;
+  }
+  
+  #progress{
+    width:100%;
+    height:6px;
+    background-color: #C4C4C4;
+    border-radius:5px;
+  }
+  
+  #progress > #progressbar{
+    height:inherit;
+    width:0%;
+    border-radius:inherit;
+    background-color: #C84C48;
+  }
+  
+  #buttons{
+    margin:40px 0 5px 0;
+  }
+  
+  #next{
+    margin-right:25px;
+  }
+  
+  #previous{
+    margin-left:25px;
+  }
+  
+  #like:hover{
+    color:#C84C48;
+  }
+  
+  #previous:hover{
+    color:#C84C48;
+  }
+  
+  #play:hover{
+    color:#C84C48;
+  }
+  
+  #next:hover{
+    color:#C84C48;
+  }
+  
+  #mode:hover{
+    color:#C84C48;
+  }
