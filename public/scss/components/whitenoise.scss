@@ -34,7 +34,8 @@ p > img{
     color: black;
     background-color: #FDF5F2;
     border:none;
-    margin:-2%;
+    cursor:pointer;
+    // margin:-2%;
 
 }
 
@@ -116,6 +117,7 @@ p > img{
   
   #buttons{
     margin:40px 0 5px 0;
+    cursor:pointer;
   }
   
   #next{

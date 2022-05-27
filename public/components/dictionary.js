@@ -4,6 +4,7 @@ const sound = document.getElementById("pronounce");
 const searchBar = document.getElementById("search_bar");
 const btn = document.getElementById("check");
 
+
 btn.addEventListener("click", () => {
     let inputWord = searchBar.value;
     console.log(inputWord);
@@ -14,7 +15,7 @@ btn.addEventListener("click", () => {
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
-        <button id="sound" click ="playSound">
+        <button id="sound" click ="playSound()">
         <i class="material-icons">volume_up</i>
         </button>
         <p id="mean">${data[0].meanings[0].definitions[0].definition}</p>
@@ -24,13 +25,16 @@ btn.addEventListener("click", () => {
           <p id="synonym_2">${data[0].meanings[0].synonyms[1]}</p>
           <p id="synonym_3">${data[0].meanings[0].synonyms[2]}</p>
         </div>`;
-        sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
+        sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound);
+
+        document.getElementById('sound').onclick = playSound;
 
     });
 });
 
 
-// function playSound(){
-//     sound.play();
-// };
+function playSound(){
+    sound.play();
+    console.log("call");
+};

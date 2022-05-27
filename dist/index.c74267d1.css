@@ -54,7 +54,7 @@ li a:hover {
 }
 
 .navigation > #stopWatch:hover {
-  color: #000;
+  color: #605f5f;
 }
 
 .task-list {
@@ -295,15 +295,15 @@ p {
   background-color: #605f5f;
 }
 
-#fullScreen {
-  float: right;
+#full_screen {
+  float: left;
   color: #000;
   background-color: #fdf5f2;
   border: none;
   margin: -2px 5px;
 }
 
-#fullScreen:hover {
+#full_screen:hover {
   color: #c84c48;
 }
 
@@ -439,9 +439,9 @@ p > img {
 
 #whitenoise_1 > button {
   color: #000;
+  cursor: pointer;
   background-color: #fdf5f2;
   border: none;
-  margin: -2%;
   display: inline-block;
 }
 
@@ -512,6 +512,7 @@ p > img {
 }
 
 #buttons {
+  cursor: pointer;
   margin: 40px 0 5px;
 }
 

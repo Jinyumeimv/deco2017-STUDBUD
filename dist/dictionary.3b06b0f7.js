@@ -531,9 +531,8 @@ var _stopwatch = require("./components/stopwatch");
 var _pomodoro = require("./components/pomodoro");
 var _whitenoise = require("./components/whitenoise");
 var _dictionary = require("./components/dictionary");
-var _musicList = require("./components/musicList");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV","./components/musicList":"e12Z3"}],"5i9SJ":[function(require,module,exports) {
+},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"5i9SJ":[function(require,module,exports) {
 
 },{}],"3fKV6":[function(require,module,exports) {
 let stopWatch = document.getElementById("spopup");
@@ -641,18 +640,18 @@ function stopInterval() {
 let AllWhiteNoise = [
     {
         name: "Falme",
-        img: "sunset.png",
-        music: "Flame.mp3"
+        img: new URL(require("53c3044fceb5b98")),
+        music: new URL(require("5330cbb0a21ed333"))
     },
     {
         name: "Rain",
-        img: "rainimg.png",
-        music: "rain.mp3"
+        img: new URL(require("6d3fd96187389d0a")),
+        music: new URL(require("5b277773161217b8"))
     },
     {
         name: "Sea Waves",
-        img: "sea.png",
-        music: "sea.mp3"
+        img: new URL(require("33d3b5ded924a318")),
+        music: new URL(require("6cf5ce96cee0737b"))
     }
 ];
 let box = document.getElementById("whitenoise");
@@ -670,15 +669,15 @@ previousBtn = whiteNoise.querySelector("#previous");
 nextBtn = whiteNoise.querySelector("#next");
 progressArea = whiteNoise.querySelector("#progress");
 progressBar = whiteNoise.querySelector("#progressbar");
-let musicIndex = 1;
+let musicIndex = 2;
 //   let AllWhiteNoise;
 window.addEventListener("load", ()=>{
     loadMusic(musicIndex);
 });
 function loadMusic(indexNum) {
     whiteNoiseName.innerText = AllWhiteNoise[indexNum - 1].name;
-    whiteNoiseImg.src = `./images/${AllWhiteNoise[indexNum - 1].img}`;
-    whiteNoiseSound.src = `${AllWhiteNoise[indexNum - 1].music}`;
+    whiteNoiseImg.src = AllWhiteNoise[indexNum - 1].img;
+    whiteNoiseSound.src = AllWhiteNoise[indexNum - 1].music;
 }
 function previousWhiteNoise() {
     musicIndex--;
@@ -723,7 +722,59 @@ progressArea.addEventListener("click", (e)=>{
     whiteNoiseSound.currentTime = clickedOffSetX;
 });
 
-},{}],"7HJAV":[function(require,module,exports) {
+},{"53c3044fceb5b98":"fPFna","6d3fd96187389d0a":"2wIoq","33d3b5ded924a318":"1We3u","5330cbb0a21ed333":"eKX0m","5b277773161217b8":"lpVxE","6cf5ce96cee0737b":"hvooo"}],"fPFna":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sunset.de2db152.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"2wIoq":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "rainimg.9fa865b9.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"1We3u":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sea.0760c6f3.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"eKX0m":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "Flame.cf89404c.mp3" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lpVxE":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "rain.7f3a6f82.mp3" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"hvooo":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sea.040f7c6d.mp3" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"7HJAV":[function(require,module,exports) {
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("content");
 const sound = document.getElementById("pronounce");
@@ -738,7 +789,7 @@ btn.addEventListener("click", ()=>{
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
-        <button id="sound" click ="playSound">
+        <button id="sound" click ="playSound()">
         <i class="material-icons">volume_up</i>
         </button>
         <p id="mean">${data[0].meanings[0].definitions[0].definition}</p>
@@ -748,31 +799,15 @@ btn.addEventListener("click", ()=>{
           <p id="synonym_2">${data[0].meanings[0].synonyms[1]}</p>
           <p id="synonym_3">${data[0].meanings[0].synonyms[2]}</p>
         </div>`;
-        sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
+        sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound);
+        document.getElementById('sound').onclick = playSound;
     });
-}); // function playSound(){
- //     sound.play();
- // };
-
-},{}],"e12Z3":[function(require,module,exports) {
-let AllWhiteNoise = [
-    {
-        name: "Falme",
-        img: "./sunset.png",
-        music: "./Flame.mp3"
-    },
-    {
-        name: "Rain",
-        img: "./rainimg.png",
-        music: "rain.mp3"
-    },
-    {
-        name: "Sea Waves",
-        img: "./sea.png",
-        music: "./sea.mp3"
-    }
-];
+});
+function playSound() {
+    sound.play();
+    console.log("call");
+}
 
 },{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
 

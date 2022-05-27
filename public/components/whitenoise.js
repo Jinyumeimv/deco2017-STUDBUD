@@ -1,20 +1,20 @@
 let AllWhiteNoise = [
     {
       name:"Falme",
-      img: "sunset.png",
-      music:"Flame.mp3"
+      img: new URL('../images/sunset.png', import.meta.url),
+      music: new URL('../Flame.mp3', import.meta.url)
     },
     
     {
       name:"Rain",
-      img: "rainimg.png",
-      music:"rain.mp3"
+      img: new URL('../images/rainimg.png', import.meta.url),
+      music: new URL('../rain.mp3', import.meta.url)
     },
   
     {
       name:"Sea Waves",
-      img: "sea.png",
-      music:"sea.mp3"
+      img: new URL('../images/sea.png', import.meta.url),
+      music: new URL('../sea.mp3', import.meta.url)
     }
   ];
 
@@ -36,7 +36,7 @@ nextBtn = whiteNoise.querySelector("#next");
 progressArea = whiteNoise.querySelector("#progress");
 progressBar = whiteNoise.querySelector("#progressbar");
 
-let musicIndex = 1;
+let musicIndex = 2;
 
 //   let AllWhiteNoise;
 
@@ -46,8 +46,8 @@ window.addEventListener("load", ()=>{
 
 function loadMusic(indexNum){
   whiteNoiseName.innerText = AllWhiteNoise[indexNum-1].name;
-  whiteNoiseImg.src = `./images/${AllWhiteNoise[indexNum-1].img}`;
-  whiteNoiseSound.src = `${AllWhiteNoise[indexNum-1].music}`;
+  whiteNoiseImg.src = AllWhiteNoise[indexNum-1].img;
+  whiteNoiseSound.src = AllWhiteNoise[indexNum-1].music;
 }
 
 function previousWhiteNoise(){
