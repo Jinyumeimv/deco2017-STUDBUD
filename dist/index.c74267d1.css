@@ -118,7 +118,10 @@ h2 {
 }
 
 .box4 p .material-icons, .box5 p .material-icons, .box6 p .material-icons {
-  margin-left: 200px;
+  float: right;
+  cursor: pointer;
+  margin-right: 15px;
+  display: flex;
 }
 
 .box4 {
@@ -156,7 +159,7 @@ h2 {
   border-radius: 10px 0 0 10px;
 }
 
-#search {
+#check {
   width: 100px;
   height: 55px;
   background-color: #c84c48;
@@ -164,7 +167,7 @@ h2 {
   border-radius: 0 10px 10px 0;
 }
 
-#search i {
+#check i {
   color: #fff;
 }
 
@@ -407,11 +410,12 @@ p {
 }
 
 #whitenoise_1 {
-  height: 70px;
+  height: 40px;
   width: 300px;
   z-index: 2;
   background-color: #fdf5f2;
   border-radius: 5px;
+  padding: 5px;
   display: inline-block;
   position: absolute;
   top: 0%;
@@ -438,11 +442,12 @@ p > img {
 }
 
 #whitenoise_1 > button {
+  float: left;
   color: #000;
   cursor: pointer;
   background-color: #fdf5f2;
   border: none;
-  display: inline-block;
+  display: flex;
 }
 
 #whitenoise_1 > button:hover {
@@ -450,8 +455,8 @@ p > img {
 }
 
 #whitenoise {
-  height: 420px;
-  width: 240px;
+  height: 350px;
+  width: 250px;
   z-index: 2;
   visibility: hidden;
   background-color: #fdf5f2;
@@ -470,13 +475,8 @@ p > img {
 }
 
 #function_name {
-  margin: 10px auto;
-  font-size: 30px;
-}
-
-#musiclist {
-  float: right;
-  margin-left: 20px;
+  margin-left: 40px;
+  font-size: 25px;
 }
 
 #musiclist:hover {

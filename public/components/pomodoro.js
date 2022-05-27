@@ -51,7 +51,6 @@ function timer(){
   }
 
   if(focusMins.innerText == 0 && focusSec.innerText == 0){
-    // if(breakSec.innerText !=0){
        breakSec.innerText--;
     }else if(breakMins.innertext != 0 && breakSec.innerText == 0){
     breakSec.innerText = 59;

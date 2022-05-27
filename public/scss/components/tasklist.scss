@@ -60,7 +60,10 @@ h2{
             font-weight: bold;
 
             .material-icons{
-                margin-left: 200px;
+                display:flex;
+                float:right;
+                margin-right:15px;
+                cursor:pointer;
             }
         }
     }

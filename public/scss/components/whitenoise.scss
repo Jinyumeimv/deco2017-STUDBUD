@@ -4,10 +4,11 @@
     background-color: #FDF5F2;
     top: 0%;
     left: 75%;
-    height:70px;
+    height:40px;
     width:300px;
     z-index: 2;
     border-radius: 5px;
+    padding:5px;
 
     p{
         font-size: 20px;
@@ -30,7 +31,8 @@ p > img{
 }
 
 #whitenoise_1 > button{
-    display:inline-block;
+    display:flex;
+    float:left;
     color: black;
     background-color: #FDF5F2;
     border:none;
@@ -53,8 +55,8 @@ p > img{
     background-color: #FDF5F2;
     border-radius:5px;
     padding:5px 30px;
-    height:420px;
-    width:240px;
+    height:350px;
+    width:250px;
     top: 5%;
     left: 75%;
     z-index: 2;
@@ -68,14 +70,14 @@ p > img{
   }
   
   #function_name{
-    font-size:30px;
-    margin:10px auto;
+    font-size:25px;
+    margin-left: 40px;
   }
   
-  #musiclist{
-    float:right;
-    margin-left:20px;
-  }
+  // #musiclist{
+  //   float:right;
+  //   margin-left:20px;
+  // }
   
   #musiclist:hover{
     color:#C84C48;
