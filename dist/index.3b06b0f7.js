@@ -543,12 +543,13 @@ popup.addEventListener("click", function() {
 });
 window.onload = function() {
     var seconds = 00;
+    var secs = 00;
     var tens = 00;
-    var appendTens = document.getElementById("tens");
-    var appendSeconds = document.getElementById("seconds");
-    var buttonStart = document.getElementById('button-start');
-    var buttonStop = document.getElementById('button-stop');
-    var buttonReset = document.getElementById('button-reset');
+    var actualTens = document.getElementById("tens");
+    var actualSecs = document.getElementById("seconds");
+    var buttonStart = document.getElementById('stopwatch_start');
+    var buttonStop = document.getElementById('stopwatch_stop');
+    var buttonReset = document.getElementById('stopwatch_reset');
     var Interval;
     buttonStart.onclick = function() {
         clearInterval(Interval);
@@ -561,22 +562,22 @@ window.onload = function() {
     buttonReset.onclick = function() {
         clearInterval(Interval);
         tens = "00";
-        seconds = "00";
-        appendTens.innerHTML = tens;
-        appendSeconds.innerHTML = seconds;
+        secs = "00";
+        actualTens.innerHTML = tens;
+        actualSecs.innerHTML = secs;
     };
     function startTimer() {
         tens++;
-        if (tens <= 9) appendTens.innerHTML = "0" + tens;
-        if (tens > 9) appendTens.innerHTML = tens;
+        if (tens <= 9) actualTens.innerHTML = "0" + tens;
+        if (tens > 9) actualTens.innerHTML = tens;
         if (tens > 99) {
-            console.log("seconds");
-            seconds++;
-            appendSeconds.innerHTML = "0" + seconds;
+            console.log("secs");
+            secs++;
+            actualSecs.innerHTML = "0" + secs;
             tens = 0;
-            appendTens.innerHTML = "00";
+            actualTens.innerHTML = "00";
         }
-        if (seconds > 9) appendSeconds.innerHTML = seconds;
+        if (secs > 9) actualSecs.innerHTML = secs;
     }
 };
 

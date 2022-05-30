@@ -237,7 +237,7 @@ h2 {
   color: #605f5f;
 }
 
-#button-start, #button-stop, #button-reset {
+#stopwatch_start, #stopwatch_stop, #stopwatch_reset {
   color: #fff;
   background-color: #c84c48;
   border: none;
@@ -246,7 +246,7 @@ h2 {
   font-size: 30px;
 }
 
-#button-start {
+#stopwatch_start {
   margin-left: 10px;
 }
 
