@@ -16,7 +16,7 @@ nav{
     padding: 0;
 }
 
-li > a {
+#nav > li > a {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
@@ -45,4 +45,8 @@ li a:hover{
 
 .navigation > #stopWatch:hover{
     color:#605F5F;
+}
+
+#title{
+ color:white;
 }

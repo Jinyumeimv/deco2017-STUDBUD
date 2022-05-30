@@ -6,6 +6,7 @@
     z-index: 2;
     border-radius: 5px;
     visibility: hidden;
+    width:280px;
 }
 
 #spopup.active{
@@ -24,7 +25,7 @@
     color: #605F5F;
 }
 
-button{
+#button-start, #button-stop, #button-reset{
     background-color: #C84C48;
     color:white;
     border:none;
@@ -42,7 +43,7 @@ button:hover{
     color:white;
 }
 
-p{
+#num{
     color:black;
     font-size: 55px;
     margin-left: 10px;

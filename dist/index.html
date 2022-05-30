@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Studbud</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.d2232a08.ico">
+  <link rel="icon" type="image/x-icon" href="/icon.ede04c9e.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
@@ -13,8 +13,8 @@
 <body>
   <div class="container">
     <div class="navigation">
-      <h1>Studbud</h1>
-      <ul>
+      <h1 id="title">Studbud</h1>
+      <ul id="nav">
         <li><a href="/index.html" id="todo"><i class="material-icons">list_alt</i>  To do</a></li>
         <li><a href="/dictionary.html" id="dictionary"><i class="material-icons">menu_book</i>  Dictionary</a></li>
       </ul>
@@ -24,9 +24,11 @@
 
     <!-- Stop watch -->
       <div id="spopup">
-        <button id="close"><i class="material-icons">close</i></button>
+        <!-- <button id="close"><i class="material-icons">close</i></button> -->
     
-        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+        <p id="num">
+          <span id="seconds">00</span>:<span id="tens">00</span>
+        </p>
           <button id="button-start">Start</button>
           <button id="button-stop">Stop</button>
           <button id="button-reset">Reset</button>
@@ -107,11 +109,12 @@
       <div class="columns">
         <div class="box4">
           <p>To Do
-            <i class="material-icons">add</i>
+            <button id="newTask"><i class="material-icons">add</i></button>
           </p>
         </div>
         <div class="box5">
           <p>In progress
+            <!-- <button id="newTask_2"><i class="material-icons">add</i></button> -->
             <i class="material-icons">add</i>
           </p>
         </div>
@@ -125,9 +128,127 @@
         <div class="box2"></div>
         <div class="box3"></div>
       </div>
+
+      <!-- Add new task card -->
+
+      <form id="taskform">
+        <div id="title">
+          <h2 id="functionName">Create a new task</h2>
+        </div>
+      
+        
+      <div id="input_box">
+        <div id="task_name">
+          <p>Task name</p>
+          <input type="text" id="taskInput" name="taskInput">
+        </div>
+      
+        <div id="Deadline">
+          <p>Deadline</p>
+      
+          <div id="box">
+          <div id="date">
+          <label for="date">Date</label><br>
+          <input type="date" name="dueDate" id="dueDateInput">
+          </div>
+      
+          <div id="time_zone">
+          <label for="date">Timezone</label><br>
+          <select name="timezone" id="timezone">
+            <option value="">Select one</option>
+            <option value="CST">CST</option>
+            <option value="AEST">AEST</option>
+          </select>
+          </div>
+      
+          <div id="time">
+          <label for="time">Time</label><br>
+          <input type="time" name="time" id="due_time">
+          </div>
+          </div>
+        </div>
+      
+        <div id="details">
+          <p>Details</p>
+          <input type="text" id="detail" name="details">
+        </div>
+      
+        <div id="tags">
+          <p>Type</p>
+          <div id="tasktype">
+              <label id="tag_1">
+              <input type="radio" name="radio" id="lecture" value="Lecture">
+              Lecture
+              <span class="checkmark"></span>
+              </label>
+      
+              <label id="tag_2">
+              <input type="radio" name="radio" id="meeting" value="Meeting">
+              Meeting
+              <span class="checkmark"></span>
+              </label>
+      
+              <label id="tag_3">
+              <input type="radio" name="radio" id="reading" value="Reading">
+              Reading
+              <span class="checkmark"></span>
+              </label>
+            
+            <button id="add">+</button>
+          </div>
+        </div>
+      
+        <div id="estimated">
+          <p>Time to complete</p>
+      
+          <div id="estimate">
+          
+          <div id="hour"> 
+          <label for="hour">Hour(s)</label><br>
+          <input type="number" id="e_hour" name="hours"><br>
+          </div>
+      
+          <div id="min"> 
+          <label for="min">Minute(s)</label><br>
+          <input type="number" id="e_min" name="mins">
+          </div>
+        </div>
+        </div>
+      
+        <div id="priority">
+        <p>Task Priority</p>
+          <select name="prority" id="priorityInput">
+            <option value="">Select one</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+      
+        <div id="create_delate">
+          
+          <div id="Delate">
+            <button type="submit" id="cancel">DELATE</button>
+          </div>
+          
+          <div id="Create">
+            <button id="create">CREATE</button>
+          </div>
+        
+        </div>
+        </div>
+        </form>
+      
+        <div id="taskCard">
+          <ul>
+          </ul>
+        </div>
+
+
+
     </div>
   </div>
 </body>
 
-<script src="/dictionary.3b06b0f7.js" defer=""></script>
+<script src="/index.3b06b0f7.js" defer=""></script>
 </html>

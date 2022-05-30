@@ -1,16 +1,16 @@
 .task-list { 
     grid-area: task-list;  
 }
-#taskform{
-    grid-area: taskform;
-    max-width: 300px;
-    margin: 0 auto;
+// #taskform{
+//     grid-area: taskform;
+//     max-width: 300px;
+//     margin: 0 auto;
 
-    label{
-        display:block;
-        width: 100%;
-    }
-}
+//     label{
+//         display:block;
+//         width: 100%;
+//     }
+// }
 h2{
     display: inline-block;
     color: #C84C48;
@@ -55,11 +55,12 @@ h2{
 
         p{
             color:white;
+            margin-top:15px;
             margin-left: 3%;
             font-size: 16px;
             font-weight: bold;
 
-            .material-icons{
+            .material-icons, #newTask{
                 display:flex;
                 float:right;
                 margin-right:15px;
@@ -76,4 +77,10 @@ h2{
     }
     .box6{
         background-color:#F77F00;
+    }
+
+    #newTask{
+        background-color:#33658A;
+        border:none;
+        color:white;
     }

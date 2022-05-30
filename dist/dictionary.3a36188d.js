@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"2xDT7":[function(require,module,exports) {
+})({"bNGQY":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "4d0423473b06b0f7";
+module.bundle.HMR_BUNDLE_ID = "8522a2473a36188d";
 function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -525,16 +525,13 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"2OD7o":[function(require,module,exports) {
-var _tasklist = require("./components/tasklist");
+},{}],"aQ96I":[function(require,module,exports) {
 var _stopwatch = require("./components/stopwatch");
 var _pomodoro = require("./components/pomodoro");
 var _whitenoise = require("./components/whitenoise");
-var _addcard = require("./components/addcard");
+var _dictionary = require("./components/dictionary");
 
-},{"./components/tasklist":"5i9SJ","./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/addcard":"j5iNA"}],"5i9SJ":[function(require,module,exports) {
-
-},{}],"3fKV6":[function(require,module,exports) {
+},{"./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"3fKV6":[function(require,module,exports) {
 let stopWatch = document.getElementById("spopup");
 let popup = document.getElementById("stopWatch");
 popup.addEventListener("click", function() {
@@ -721,8 +718,8 @@ progressArea.addEventListener("click", (e)=>{
     whiteNoiseSound.currentTime = clickedOffSetX;
 });
 
-},{"53c3044fceb5b98":"fPFna","5330cbb0a21ed333":"eKX0m","6d3fd96187389d0a":"2wIoq","5b277773161217b8":"lpVxE","33d3b5ded924a318":"1We3u","6cf5ce96cee0737b":"hvooo"}],"fPFna":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sunset.de2db152.png" + "?" + Date.now();
+},{"53c3044fceb5b98":"75oTM","5330cbb0a21ed333":"14gE2","6d3fd96187389d0a":"7u1NN","5b277773161217b8":"f2roW","33d3b5ded924a318":"gIcMM","6cf5ce96cee0737b":"gSm8m"}],"75oTM":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "sunset.de2db152.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
@@ -758,160 +755,56 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"eKX0m":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "Flame.cf89404c.mp3" + "?" + Date.now();
+},{}],"14gE2":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "Flame.cf89404c.mp3" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"2wIoq":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "rainimg.9fa865b9.png" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"7u1NN":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "rainimg.9fa865b9.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"lpVxE":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "rain.7f3a6f82.mp3" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"f2roW":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "rain.7f3a6f82.mp3" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"1We3u":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sea.0760c6f3.png" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"gIcMM":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "sea.0760c6f3.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"hvooo":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sea.040f7c6d.mp3" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"gSm8m":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "sea.040f7c6d.mp3" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"j5iNA":[function(require,module,exports) {
-let subButton = document.getElementById("create");
-let list = document.getElementById("taskform");
-let addNew = document.getElementById("newTask");
-renderItems();
-subButton.addEventListener("click", function() {
+},{"./helpers/bundle-url":"lgJ39"}],"7HJAV":[function(require,module,exports) {
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+const result = document.getElementById("content");
+const sound = document.getElementById("pronounce");
+const searchBar = document.getElementById("search_bar");
+const btn = document.getElementById("check");
+btn.addEventListener("click", ()=>{
+    let inputWord = searchBar.value;
+    console.log(inputWord);
+    fetch(`${url}${inputWord}`).then((response)=>response.json()
+    ).then((data)=>{
+        console.log(data);
+        result.innerHTML = `
+        <p id="word">${inputWord}</p>
+        <p id="property">${data[0].meanings[0].partOfSpeech}</p>
+        <button id="sound" click ="playSound()">
+        <i class="material-icons">volume_up</i>
+        </button>
+        <p id="mean">${data[0].meanings[0].definitions[0].definition}</p>
+        <p id="synonym">Synonyms</p>
+        <div id="synonyms">
+          <p id="synonym_1">${data[0].meanings[0].synonyms[0]}</p>
+          <p id="synonym_2">${data[0].meanings[0].synonyms[1]}</p>
+          <p id="synonym_3">${data[0].meanings[0].synonyms[2]}</p>
+        </div>`;
+        sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
+        console.log(sound);
+        document.getElementById('sound').onclick = playSound;
+    });
+});
+function playSound() {
+    sound.play();
     console.log("call");
-    let itemName = document.getElementById("taskInput").value;
-    let Detail = document.getElementById("detail").value;
-    let estimatedTimeInput = document.getElementById("e_hour").value;
-    let estimatedTimeInput_m = document.getElementById("e_min").value;
-    let dueDateInput = document.getElementById("dueDateInput").value;
-    let timezone = document.getElementById("timezone").value;
-    let duetime = document.getElementById("due_time").value;
-    let tag_lecture = document.getElementById("lecture").value;
-    let tag_meeting = document.getElementById("meeting").value;
-    let tag_reading = document.getElementById("reading").value;
-    var priorityInput = document.getElementById("priorityInput").value;
-    if (itemName == "") {
-        document.getElementById("taskInput").classList.add("error");
-        return;
-    }
-    let itemObj = {
-        'itemName': itemName,
-        'Detail': Detail,
-        'estimatedTimeInput': estimatedTimeInput,
-        'estimatedTimeInput_m': estimatedTimeInput_m,
-        'dueDateInput': dueDateInput,
-        'timezone': timezone,
-        'duetime': duetime,
-        'priorityInput': priorityInput,
-        'tag_lecture': tag_lecture,
-        'tag_meeting': tag_meeting,
-        'tag_reading': tag_reading
-    };
-    let existingItems = getItems();
-    existingItems.push(itemObj);
-    existingItems = JSON.stringify(existingItems);
-    localStorage.setItem('items', existingItems);
-    renderItems();
-});
-function getItems() {
-    let items = localStorage.getItem('items');
-    if (items == null) return [];
-    items = JSON.parse(items);
-    return items;
 }
-function renderItems() {
-    let items = getItems();
-    let itemUl = document.querySelector('#taskCard ul');
-    itemUl.innerHTML = "";
-    items.forEach(function(item) {
-        let itemLi = document.createElement('li');
-        itemLi.setAttribute('draggable', 'true');
-        itemLi.setAttribute('id', 'card');
-        // taskName
-        let itemName = document.createElement('h1');
-        itemName.setAttribute('id', 'itemname');
-        itemName.innerText = item.itemName;
-        // details
-        let Detail = document.createElement('p');
-        Detail.setAttribute('id', 'details');
-        Detail.innerText = item.Detail;
-        // estimate time hours
-        let estimatedTimeInput = document.createElement('p');
-        estimatedTimeInput.setAttribute('id', 'hours');
-        estimatedTimeInput.innerText = item.estimatedTimeInput;
-        // estimate time min
-        let estimatedTimeInput_m = document.createElement('p');
-        estimatedTimeInput_m.setAttribute('id', 'mins');
-        estimatedTimeInput_m.innerText = item.estimatedTimeInput_m;
-        // duedate
-        let dueDateInput = document.createElement('p');
-        dueDateInput.setAttribute('id', 'deadline');
-        dueDateInput.innerText = item.dueDateInput;
-        // timezone
-        let timezone = document.createElement('p');
-        timezone.setAttribute('id', 'timeZone');
-        timezone.innerText = item.timezone;
-        // time
-        let duetime = document.createElement('p');
-        duetime.setAttribute('id', 'time');
-        duetime.innerText = item.duetime;
-        // tag_lecture
-        let tag_lecture = document.createElement('p');
-        tag_lecture.setAttribute('id', 'lec');
-        tag_lecture.innerText = item.tag_lecture;
-        // tag_meeting
-        let tag_meeting = document.createElement('p');
-        tag_meeting.setAttribute('id', 'meet');
-        tag_meeting.innerText = item.tag_meeting;
-        // tag_reading
-        let tag_reading = document.createElement('p');
-        tag_reading.setAttribute('id', 'lec');
-        tag_reading.innerText = item.tag_reading;
-        // priority
-        let priorityInput = document.createElement('p');
-        priorityInput.setAttribute('id', 'priority');
-        priorityInput.innerText = item.priorityInput;
-        let itemRemove = document.createElement('button');
-        itemRemove.setAttribute('class', 'remove');
-        itemRemove.innerText = "Delate this card";
-        itemRemove.addEventListener("click", function() {
-            itemLi.remove();
-            removeItem(item.itemName);
-        });
-        itemLi.appendChild(itemName);
-        itemLi.appendChild(Detail);
-        itemLi.appendChild(estimatedTimeInput);
-        itemLi.appendChild(estimatedTimeInput_m);
-        itemLi.appendChild(dueDateInput);
-        itemLi.appendChild(timezone);
-        itemLi.appendChild(duetime);
-        itemLi.appendChild(tag_lecture);
-        itemLi.appendChild(tag_meeting);
-        itemLi.appendChild(tag_reading);
-        itemLi.appendChild(priorityInput);
-        itemLi.appendChild(itemRemove);
-        itemUl.appendChild(itemLi);
-    });
-}
-function removeItem(itemName) {
-    let items = getItems();
-    let itemIndex = items.findIndex(function(item) {
-        return item.itemName == itemName;
-    });
-    items.splice(itemIndex, 1);
-    items = JSON.stringify(items);
-    localStorage.setItem('items', items);
-}
-addNew.addEventListener("click", function() {
-    console.log("kala");
-    list.classList.toggle("appear");
-});
-subButton.addEventListener("click", function() {
-    console.log("lala");
-    list.classList.toggle("active");
-});
 
-},{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire0064")
+},{}]},["bNGQY","aQ96I"], "aQ96I", "parcelRequire0064")
 
-//# sourceMappingURL=index.3b06b0f7.js.map
+//# sourceMappingURL=dictionary.3a36188d.js.map

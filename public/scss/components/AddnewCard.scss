@@ -1,0 +1,233 @@
+#taskform{
+    position:absolute;
+    z-index:3;
+    top:100px;
+    left:450px;
+    background-color: #FDF5F2;
+    border-radius:5px;
+    padding:5px 30px;
+    height:520px;
+    width:720px;
+    visibility: hidden;
+    // visibility: visible; 
+  }
+  
+  #taskform.active{
+    visibility: hidden;
+  }
+  
+  #taskform.appear{
+  /*   visibility: hidden; */
+    visibility: visible;
+  }
+  
+  #input_box{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  #functionName{
+    display:flex;
+    font-size:30px;
+    color:black;
+  }
+  
+  label{
+    color:#7d7d7d;
+    font-size:15px;
+  }
+  
+  div{
+    margin:10px;
+  }
+  
+  #estimate{
+    display:flex;
+  /*   align-items:center; */
+    justify-content:flex-start;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  
+  #box{
+    display:flex;
+    margin-left:-10px;
+    margin-top:-10px;
+  }
+  
+  p{
+      font-size:20px;
+      margin:0px;
+    }
+  
+  input[type=date], input[type=time], input[type=number], input[type=text], select{
+    border: 2px solid #C4C4C4;
+    border-radius:4px;
+    background-color: #FDF5F2;
+  }
+  
+  input[type=text]{
+    width:300px;
+    height:40px;
+    font-size:18px;
+  }
+  
+  input[type=number]{
+    width:130px;
+    height:40px;
+    font-size:18px;
+  }
+  
+  #priority > select{
+    width:310px;
+    height:40px;
+  }
+  
+  #tasktype > label{
+    font-size:10px;
+    padding:10px 5px; 
+    border-radius:20px;
+    border:none;
+    color:white;
+    cursor:pointer;
+    display:inline;
+    margin-right:5px;
+  }
+  
+  #tag_1{
+    background-color: #BBD379;
+  }
+  
+  #tag_1:hover{
+    background-color: #acc468;
+  }
+  
+  #tag_2{
+    background-color: #C77DFF;
+  }
+  
+  #tag_2:hover{
+    background-color: #b36cea;
+  }
+  
+  #tag_3{
+    background-color: #F67C63;
+  }
+  
+  #tag_3:hover{
+    background-color: #ec6e55;
+  }
+  
+  
+  #add{
+    background-color:#C84C48;
+    width:40px;
+    font-size:20px;
+    padding:5px; 
+    border-radius:20px;
+    border:none;
+    color:white;
+    cursor:pointer;
+    display:inline;
+    margin-right:5px;
+  }
+  
+  #add:hover{
+     background-color:#932825;
+  }
+  
+  #create_delate{
+    display:flex;
+    justify-content:flex-end;
+  }
+  
+  #create{
+    height:50px;
+    width:120px;
+    font-size:22px;
+    border:none;
+    background-color:#C84C48;
+    color:white;
+    border-radius:10px;
+  }
+  
+  #create:hover{
+    background-color:#932825;
+  }
+  
+  #cancel{
+    height:50px;
+    width:120px;
+    font-size:22px;
+    border:none;
+    background-color:#605F5F;
+    color:white;
+    border-radius:10px;
+  }
+  
+  #cancel:hover{
+    background-color:#2c2b2b;
+  }
+  
+  #taskCard ul{
+    list-style-type: none;
+  }
+  
+  #card{
+    color:black;
+    background-color:white;
+    border-radius:8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-left: 5px solid #F67C63;  
+    padding-left:10px;
+    height:200px;
+    width:280px;
+    display:absolute;
+    top:0%;
+    list-style-type:none;
+  }
+  
+  
+  #delate{
+    color:black;
+    border:none;
+    background-color:#C4C4C4;
+    border-radius:5px;
+    width:120px;
+    height:40px;
+  }
+  
+  h1{
+    color:black;
+    font-weight:bold;
+    margin-bottom:0px;
+  }
+  p{
+    font-size:15px;
+  }
+  #details{
+    color:#757575;
+    font-size:18px;
+  }
+  
+  #hours{
+    display: inline;
+  }
+  
+  #mins{
+    display: inline;
+  }
+  
+  #timeZone{
+    display: inline;
+    font-weight:bold;
+  }
+  
+  #time{
+    display: inline;
+  }
+  
+  .remove{
+    float:right;
+    margin-right:10px;
+  }
