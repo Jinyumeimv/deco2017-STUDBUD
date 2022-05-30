@@ -778,6 +778,8 @@ module.exports = require('./helpers/bundle-url').getBundleURL('6BXdU') + "sea.04
 let subButton = document.getElementById("create");
 let list = document.getElementById("taskform");
 let addNew = document.getElementById("newTask");
+let taskCard = document.getElementById("card");
+let column = document.querySelectorAll("#taskCard");
 renderItems();
 subButton.addEventListener("click", function() {
     console.log("call");

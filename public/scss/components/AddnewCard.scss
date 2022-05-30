@@ -171,6 +171,7 @@
   
   #taskCard ul{
     list-style-type: none;
+    margin-left: -15px;
   }
   
   #card{
@@ -182,9 +183,9 @@
     padding-left:10px;
     height:200px;
     width:280px;
-    display:absolute;
-    top:0%;
+    position:relative;
     list-style-type:none;
+    z-index: 2;
   }
   
   

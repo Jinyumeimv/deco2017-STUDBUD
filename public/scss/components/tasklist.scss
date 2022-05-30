@@ -30,15 +30,13 @@ h2{
     }
 
     .box1{
-        background-color:#33658A;
-        opacity:0.2;
+        background-color: rgba($color: #33658a, $alpha: 0.2);
     }
     .box2{
-        background-color:#356F30;
-        opacity: 0.2;
+        background-color:rgba($color: #356F30, $alpha: 0.2);
     }
     .box3{
-        background-color:#F77F00;
+        background-color:rgba($color: #F77F00, $alpha: 0.2);
         opacity:0.2;
     }
 
