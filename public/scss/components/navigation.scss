@@ -1,10 +1,22 @@
+// I use display: flex to build the layout, it is more flexible and can use justify-content, align-items, etc to adjust the layout.
 nav{
     display: flex;
+    align-items: center;
+    margin:5px;
 }
+
 .navigation { 
     grid-area: navigation; 
     background-color: #C84C48;
     color: white;
+}
+
+#logo > img{
+    width:80px;
+    height:80px;
+    border-radius: 0%;
+    margin: 25px;
+    margin-left:80px;
 }
 
 .navigation > ul{
@@ -29,15 +41,11 @@ li a:hover{
     color: white;
 }
 
-.navigation > h1{
-  text-align: center;
-  margin-bottom: 80px;
-}
-
 .navigation > #stopWatch{
     margin-top: 130%;
     margin-left: 40%;
-    cursor:pointer;
+    cursor:pointer; 
+    // Change the mouse style when the user hover the button, so that the user can know that the case can be clicked, which is more in line with the user's default cognition.
     background-color: #C84C48;
     color:white;
     border: none;
@@ -49,4 +57,44 @@ li a:hover{
 
 #title{
  color:white;
+}
+
+@media only screen and (max-width:700px){
+    .navigation { 
+        position:fixed;
+        top:600px;
+        height:60px;
+        width:520px;
+    }
+
+    .navigation > h1{
+        display:none;
+    }
+
+    .navigation > ul{
+        margin-top:5px;
+    }
+
+    #nav{
+        display:flex;
+    } 
+
+    #nav li{
+        display:flex;
+    } 
+
+    #nav li a:hover{
+        background-color:#C84C48;
+    }
+
+    .navigation{
+        display:flex;
+        justify-content: space-evenly;
+
+    }
+
+    .navigation > #stopWatch{
+        margin-top: 0%;
+        margin-left:0%;
+    }
 }

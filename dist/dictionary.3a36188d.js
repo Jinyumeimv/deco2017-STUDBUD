@@ -532,8 +532,10 @@ var _whitenoise = require("./components/whitenoise");
 var _dictionary = require("./components/dictionary");
 
 },{"./components/stopwatch":"3fKV6","./components/pomodoro":"gk81k","./components/whitenoise":"h7WhB","./components/dictionary":"7HJAV"}],"3fKV6":[function(require,module,exports) {
+// Get the items from DOM
 let stopWatch = document.getElementById("spopup");
 let popup = document.getElementById("stopWatch");
+// Add the click funtion to the stop watch button which on the navigation bar, it can be used to active the stopwatch.
 popup.addEventListener("click", function() {
     console.log("lala");
     stopWatch.classList.toggle("active");
@@ -556,6 +558,7 @@ window.onload = function() {
     buttonStop.onclick = function() {
         clearInterval(Interval);
     };
+    // reset the function can make the stopwatch back to the initial and the stopwatch can be restarted.
     buttonReset.onclick = function() {
         clearInterval(Interval);
         tens = "00";
@@ -565,6 +568,7 @@ window.onload = function() {
     };
     function startTimer() {
         tens++;
+        // Use if function to make the stopwatch can running. 
         if (tens <= 9) actualTens.innerHTML = "0" + tens;
         if (tens > 9) actualTens.innerHTML = tens;
         if (tens > 99) {
@@ -586,6 +590,7 @@ size.addEventListener("click", function() {
     console.log("lala");
     box.classList.toggle("active");
 });
+// var the element and get the DOM elements.
 var start = document.getElementById("start");
 var giveUp = document.getElementById("giveup");
 var focusMins = document.getElementById("f_minutes");
@@ -594,6 +599,7 @@ var focusSec = document.getElementById("f_seconds");
 var breakSec = document.getElementById("b_seconds");
 var cycles = document.getElementById("cycle");
 var startTimer;
+// After clicking the start button, the countdown will run and if the user clicks it again, the system will alert the user that: Timer is already running. Which can avoid repeat operations. 
 start.addEventListener('click', function() {
     if (startTimer === undefined) startTimer = setInterval(timer, 1000);
     else {
@@ -601,6 +607,7 @@ start.addEventListener('click', function() {
         console.log(lala);
     }
 });
+// give up the Pomodoro timer which is running, the time will back to the initial time. And the user can start a new timer or stop focusing.
 giveUp.addEventListener('click', function() {
     focusMins.innerText = 25;
     focusSec.innerText = "00";
@@ -611,6 +618,7 @@ giveUp.addEventListener('click', function() {
     console.log(hehe);
 });
 function timer() {
+    // Use the if function to discuss the focus time and the rest time separately. When the if function ends, the if else function starts to run, so the pomodoro timer can start the countdown.
     if (focusSec.innerText != 0) focusSec.innerText--;
     else if (focusMins.innerText != 0 && focusSec.innerText == 0) {
         focusSec.innerText = 59;
@@ -621,6 +629,7 @@ function timer() {
         breakSec.innerText = 59;
         breakMins.innerText--;
     }
+    // When all the numbers are equal to 0, the cycle starts to increase by one and then counts down a second time.
     if (focusMins.innerText == 0 && focusSec.innerText == 0 && breakMins.innerText == 0 && breakSec.innerText == 0) {
         focusMins.innerText = 25;
         focusSec.innerText = "00";
@@ -634,6 +643,7 @@ function stopInterval() {
 }
 
 },{}],"h7WhB":[function(require,module,exports) {
+// Build an array to get the music name, image, and sound. It can make the code easier.
 let AllWhiteNoise = [
     {
         name: "Falme",
@@ -653,10 +663,12 @@ let AllWhiteNoise = [
 ];
 let box = document.getElementById("whitenoise");
 let size = document.getElementById("big");
+// Add the click function to the open in full button.
 size.addEventListener("click", function() {
     console.log("lala");
     box.classList.toggle("active");
 });
+// get the elements in the HTML
 const whiteNoise = document.querySelector("#whitenoise");
 whiteNoiseImg = whiteNoise.querySelector("#img_area > img");
 whiteNoiseName = whiteNoise.querySelector("#whitename");
@@ -666,11 +678,15 @@ previousBtn = whiteNoise.querySelector("#previous");
 nextBtn = whiteNoise.querySelector("#next");
 progressArea = whiteNoise.querySelector("#progress");
 progressBar = whiteNoise.querySelector("#progressbar");
-let musicIndex = 2;
+// Set the number of the music, it can be identify and play the relavent white noise
+let musicIndex = 1;
 //   let AllWhiteNoise;
+// Load the whitenoise
 window.addEventListener("load", ()=>{
     loadMusic(musicIndex);
 });
+// Select the music from the array, the array is [0, 1, 2], so if I want to choose I need to set the white noise index to minus 1。
+// And get the value from array property
 function loadMusic(indexNum) {
     whiteNoiseName.innerText = AllWhiteNoise[indexNum - 1].name;
     whiteNoiseImg.src = AllWhiteNoise[indexNum - 1].img;
@@ -686,6 +702,7 @@ function nextWhiteNoise() {
     loadMusic(musicIndex);
     playMusic();
 }
+// Changing the play and pause buttons after clicking, and clicking the play button can play the white noise and the pause button can stop the white noise.
 function playMusic() {
     whiteNoise.classList.add("paused");
     playBtn.querySelector("i").innerText = "pause_circle";
@@ -700,12 +717,15 @@ playBtn.addEventListener("click", ()=>{
     const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
     isWhiteNoisePaused ? pauseMusic() : playMusic();
 });
+// Add the next and previous button, after click can change the white noise
 previousBtn.addEventListener("click", ()=>{
     previousWhiteNoise();
 });
 nextBtn.addEventListener("click", ()=>{
     nextWhiteNoise();
 });
+// make the progress bar and duration time can be dragged, but I'm not achieving it.
+// Using meth to count the duration and the time.
 whiteNoiseSound.addEventListener("timeupdate", (e)=>{
     console.log(e);
     const currentTime = e.target.currentTime;
@@ -772,17 +792,21 @@ module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "sea.07
 module.exports = require('./helpers/bundle-url').getBundleURL('bqFUB') + "sea.040f7c6d.mp3" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"7HJAV":[function(require,module,exports) {
+// Find a free dictionary API, and copy and paste the URL. It can send requests to the dictionary API and get the word's meaning, sound, etc.
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("content");
 const sound = document.getElementById("pronounce");
 const searchBar = document.getElementById("search_bar");
 const btn = document.getElementById("check");
+// Add the click type to the check button, user can get the word information. 
 btn.addEventListener("click", ()=>{
+    // get the value of search, It can be used to find the information in the dictionary API. 
     let inputWord = searchBar.value;
     console.log(inputWord);
     fetch(`${url}${inputWord}`).then((response)=>response.json()
     ).then((data)=>{
         console.log(data);
+        // copy and paste the HTML code, and use jQuery to get the information from API.
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
@@ -798,9 +822,11 @@ btn.addEventListener("click", ()=>{
         </div>`;
         sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound);
+        // Set the onclick function to the sound button
         document.getElementById('sound').onclick = playSound;
     });
 });
+// Call the palySound() function
 function playSound() {
     sound.play();
     console.log("call");

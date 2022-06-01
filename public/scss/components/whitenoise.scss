@@ -3,8 +3,8 @@
     position: absolute;
     background-color: #FDF5F2;
     top: 0%;
-    left: 75%;
-    height:40px;
+    left: 70%;
+    height:50px;
     width:300px;
     z-index: 2;
     border-radius: 5px;
@@ -21,15 +21,6 @@
   visibility: visible;
 }
 
-p > img{
-    display:inline;
-    border-radius: 50%;
-    width:45px;
-    height: 45px;
-    transform: translate(0%, 20%);
-    margin-right: 2%;
-}
-
 #whitenoise_1 > button{
     display:flex;
     float:left;
@@ -37,8 +28,6 @@ p > img{
     background-color: #FDF5F2;
     border:none;
     cursor:pointer;
-    // margin:-2%;
-
 }
 
 #whitenoise_1 > button:hover{
@@ -53,13 +42,14 @@ p > img{
     display: inline-block;
     position: absolute;
     background-color: #FDF5F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius:5px;
     padding:5px 30px;
-    height:350px;
+    height:400px;
     width:250px;
-    top: 5%;
-    left: 75%;
-    z-index: 2;
+    top: 50px;
+    left: 70%;
+    z-index: 1;
     visibility: hidden;
   }
   
@@ -129,10 +119,8 @@ p > img{
   #previous{
     margin-left:25px;
   }
+
   
-  #like:hover{
-    color:#C84C48;
-  }
   
   #previous:hover{
     color:#C84C48;
@@ -145,7 +133,37 @@ p > img{
   #next:hover{
     color:#C84C48;
   }
-  
-  #mode:hover{
-    color:#C84C48;
-  }
+
+
+  @media only screen and (max-width:700px){
+    #whitenoise_1{
+      position:fixed;
+      top: 550px;
+      left: 15px;
+      height:40px;
+      width:510px;
+    }
+
+    #whitenoise_1 > button{
+     float:right;
+    }
+
+    #whitenoise{
+      position:fixed;
+      height:400px;
+      width:460px;
+      top: 150px;
+      left: 15px;
+    }
+
+    #img_area{
+      margin:5px 25%;
+    }
+
+    #img_area > img{
+      align-items: center;
+      height:220px;
+      width:50%;
+    }
+
+}

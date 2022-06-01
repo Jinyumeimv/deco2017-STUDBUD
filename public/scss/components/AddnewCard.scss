@@ -9,6 +9,7 @@
     height:520px;
     width:720px;
     visibility: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     // visibility: visible; 
   }
   
@@ -78,7 +79,7 @@
     font-size:18px;
   }
   
-  #priority > select{
+  #priorityInput, #taskSelector{
     width:310px;
     height:40px;
   }
@@ -119,22 +120,22 @@
   }
   
   
-  #add{
-    background-color:#C84C48;
-    width:40px;
-    font-size:20px;
-    padding:5px; 
-    border-radius:20px;
-    border:none;
-    color:white;
-    cursor:pointer;
-    display:inline;
-    margin-right:5px;
-  }
+  // #add{
+  //   background-color:#C84C48;
+  //   width:40px;
+  //   font-size:20px;
+  //   padding:5px; 
+  //   border-radius:20px;
+  //   border:none;
+  //   color:white;
+  //   cursor:pointer;
+  //   display:inline;
+  //   margin-right:5px;
+  // }
   
-  #add:hover{
-     background-color:#932825;
-  }
+  // #add:hover{
+  //    background-color:#932825;
+  // }
   
   #create_delate{
     display:flex;
@@ -171,7 +172,7 @@
   
   #taskCard ul{
     list-style-type: none;
-    margin-left: -15px;
+    margin-left: -20px;
   }
   
   #card{
@@ -186,8 +187,18 @@
     position:relative;
     list-style-type:none;
     z-index: 2;
+    padding-bottom: 10px;
+  }
+
+  #card.dragging{
+    opacity: 0.4;
+    background-color: #2c2b2b;
   }
   
+  #card > p{
+    margin-bottom:3px;
+    font-size:10px;
+  }
   
   #delate{
     color:black;
@@ -198,14 +209,13 @@
     height:40px;
   }
   
-  h1{
+  #itemname{
     color:black;
     font-weight:bold;
     margin-bottom:0px;
+    font-size: 30px;
   }
-  p{
-    font-size:15px;
-  }
+
   #details{
     color:#757575;
     font-size:18px;
@@ -231,4 +241,96 @@
   .remove{
     float:right;
     margin-right:10px;
+    border:none;
+    background-color: #8f8f8f;
+    color:white;
+    border-radius: 5px;
   }
+
+  #types{
+    background-color: #F67C63;
+    color:white;
+    border-radius: 15px;
+    width:65px;
+    padding-left:5px;
+    margin:5px 0;
+  }
+
+  #priority{
+    font-weight: 600;
+  }
+
+
+  @media only screen and (max-width:700px){
+  #taskform{
+    top:100px;
+    left:50px;
+    height:420px;
+    width:420px;
+  }
+
+  #functionName{
+    font-size:20px;
+  }
+
+  label{
+    font-size:10px;
+  }
+
+  div{
+    margin:5px;
+  }
+
+  input[type=text]{
+    width:100px;
+    height:20px;
+    font-size:18px;
+  }
+  
+  input[type=number]{
+    width:100px;
+    height:20px;
+    font-size:12px;
+  }
+  
+  #priorityInput, #taskSelector{
+    width:100px;
+    height:20px;
+  }
+
+  input[type=date], input[type=time], input[type=number], input[type=text], select{
+    width:100px;
+  }
+
+
+  #create{
+    height:30px;
+    width:80px;
+    font-size:15px;
+    border-radius:5px;
+  }
+
+  #cancel{
+    height:30px;
+    width:80px;
+    font-size:15px;
+    border-radius:5px;
+  }
+
+  #card{
+    border-radius:4px; 
+    height:100px;
+    width:120px;
+  }
+
+  #card > p{
+    margin-bottom:0px;
+    font-size:5px;
+  }
+
+  #itemname{
+    margin-bottom:0px;
+    font-size: 20px;
+  }
+
+}

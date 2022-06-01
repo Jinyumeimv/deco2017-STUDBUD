@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Add the page tirle and favicon -->
   <title>Studbud</title>
   <link rel="icon" type="image/x-icon" href="/icon.ede04c9e.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
-  <!-- <link rel="icon" href="img/favicon.png" > -->
   <link rel="stylesheet" href="/index.c74267d1.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
+
 <body>
   <div class="container">
+
+  <!-- Navigation -->
     <div class="navigation">
-      <h1 id="title">Studbud</h1>
+
+      <div id="logo">
+        <img src="/logo.b5bfa736.png" alt="logo">
+      </div>
+      <!-- In the navigation bar, I use the ul tag, which can arrange the navigation bar in a more orderly manner. -->
       <ul id="nav">
         <li><a href="/index.html" id="todo"><i class="material-icons">list_alt</i>  To do</a></li>
         <li><a href="/dictionary.html" id="dictionary"><i class="material-icons">menu_book</i>  Dictionary</a></li>
       </ul>
-
       <button id="stopWatch"><i class="material-icons">timer</i></button>
     </div>
 
     <!-- Stop watch -->
       <div id="spopup">
-        <!-- <button id="close"><i class="material-icons">close</i></button> -->
     
         <p id="num">
           <span id="seconds">00</span>:<span id="tens">00</span>
@@ -34,52 +40,36 @@
           <button id="stopwatch_reset">Reset</button>
       </div>
 
+
+<!-- task-list -->
     <div class="task-list">
       <h2>TO DO</h2>
 
-<!-- Pomodoro timer -->
+  <!-- Pomodoro timer -->
+
+  <!-- To create the drop-down popup effect, I divided the popup into two parts, the pop up will appear after clicking the open in full button. -->
       <div id="pomodorotimer_1">
         <p id="focus"><span id="f_minutes">25</span>:<span id="f_seconds">00</span></p>
-        <!-- <p><span id="seconds">00</span>:<span id="tens">00</span></p> -->
-        <!-- <button type="button" id="times_1">x1</button> -->
         <button type="button" id="full_screen"><i class="material-icons">open_in_full</i></button>
       </div>
 
-
       <div id="pomodorotimer" class="timer">
-        <!-- <p id=focus><span id="f_minutes">00</span>:<span id="f_seconds">10</span></p> -->
-         
         <p id="break"><span id="b_minutes">5</span>:<span id="b_seconds">00</span></p>
-         
-        <button id="times">x1</button>
-         <img src="/pomodoro.31fbc21c.png" alt="tomato_img" id="tomato_img">
+        <img src="/pomodoro.31fbc21c.png" alt="tomato_img" id="tomato_img">
         <span id="cycle">0</span>
          <button id="start">START</button>
          <button id="giveup">GIVE UP</button>
-        <!-- <button id="fullScreen"><i class="material-icons">open_in_full</i></button> -->
        </div>
 
-<!-- White noise -->
+  <!-- White noise -->
       <div id="whitenoise_1">
-        
-        <!-- <p><img src="./sunset.png" alt="sunset image" id="">Sunset</p> -->
-        <!-- <button type="button" id="previous"><i class="material-icons">skip_previous</i></button>
-        <button type="button" id="play"><i class="material-icons">pause_circle</i></button>
-        <button type="button" id="next"><i class="material-icons">skip_next</i></button> -->
         <button type="button" id="big"><i class="material-icons">open_in_full</i></button>
         <div id="top_bar">
-          <span id="function_name">White noise</span>
-          <!-- <i id="musiclist" class="material-icons">queue_music</i> -->
+          <span id="function_name">White Noise</span>
         </div>
       </div>
 
-
       <div id="whitenoise">
-        <!-- <div id="top_bar">
-          <span id="function_name">White noise</span>
-           <i id="musiclist" class="material-icons">queue_music</i> 
-        </div> -->
-      
         <div id="img_area">
           <img src="/sea.0760c6f3.png" alt="whitenoise_image">
         </div>
@@ -93,60 +83,72 @@
         </div>
       
         <div id="buttons">
-          <i id="like" class="material-icons">favorite</i>
           <i id="previous" class="material-icons">skip_previous</i>
+
           <div id="play">
           <i class="material-icons">play_circle</i>
           </div>
-          <!-- <i id="play" class="material-icons">pause_circle</i> -->
+    
           <i id="next" class="material-icons">skip_next</i>
-          <i id="mode" class="material-icons">shuffle</i>
+          
         </div>
+
         <audio id="audio"></audio>
       </div>
 
-      <!-- columns -->
-      <div class="columns">
+<!-- columns -->
+    <div class="columns">
+      <div id="column_name">
+  <!-- columns name -->
         <div class="box4">
           <p>To Do
             <button id="newTask"><i class="material-icons">add</i></button>
           </p>
         </div>
+
         <div class="box5">
           <p>In progress
-            <!-- <button id="newTask_2"><i class="material-icons">add</i></button> -->
             <i class="material-icons">add</i>
           </p>
         </div>
+
         <div class="box6">
           <p>Done
             <i class="material-icons">add</i>
           </p>
         </div>
 
-        <div class="box1">
+      </div>
+
+
+      <div id="column_box">
+<!-- card -->
+        <div class="box1" id="boxs">
           <div id="taskCard">
             <ul>
             </ul>
           </div>
         </div>
-        <div class="box2"></div>
-        <div class="box3"></div>
 
-        <!-- <div id="taskCard">
-          <ul>
-          </ul>
-        </div> -->
+        <div class="box2" id="boxs">
+          <div id="taskCard">
+            <ul>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box3">
+        </div>
+
       </div>
+    </div>
 
       <!-- Add new task card -->
-
-      <form id="taskform">
+    <form id="taskform">
         <div id="title">
           <h2 id="functionName">Create a new task</h2>
         </div>
       
-        
       <div id="input_box">
         <div id="task_name">
           <p>Task name</p>
@@ -157,88 +159,74 @@
           <p>Deadline</p>
       
           <div id="box">
-          <div id="date">
-          <label for="date">Date</label><br>
-          <input type="date" name="dueDate" id="dueDateInput">
-          </div>
+            <div id="date">
+              <label for="date">Date</label><br>
+              <input type="date" name="dueDate" id="dueDateInput">
+            </div>
       
-          <div id="time_zone">
-          <label for="date">Timezone</label><br>
-          <select name="timezone" id="timezone">
-            <option value="">Select one</option>
-            <option value="CST">CST</option>
-            <option value="AEST">AEST</option>
-          </select>
-          </div>
+            <div id="time_zone">
+              <label for="date">Timezone</label><br>
+              <select name="timezone" id="timezone">
+                <option value="">Select one</option>
+                <option value="CST">CST</option>
+                <option value="AEST">AEST</option>
+              </select>
+            </div>
       
           <div id="time">
-          <label for="time">Time</label><br>
-          <input type="time" name="time" id="due_time">
-          </div>
-          </div>
-        </div>
-      
-        <div id="details">
-          <p>Details</p>
-          <input type="text" id="detail" name="details">
-        </div>
-      
-        <div id="tags">
-          <p>Type</p>
-          <div id="tasktype">
-              <label id="tag_1">
-              <input type="radio" name="radio" id="lecture" value="Lecture">
-              Lecture
-              <span class="checkmark"></span>
-              </label>
-      
-              <label id="tag_2">
-              <input type="radio" name="radio" id="meeting" value="Meeting">
-              Meeting
-              <span class="checkmark"></span>
-              </label>
-      
-              <label id="tag_3">
-              <input type="radio" name="radio" id="reading" value="Reading">
-              Reading
-              <span class="checkmark"></span>
-              </label>
-            
-            <button id="add">+</button>
+            <label for="time">Time</label><br>
+            <input type="time" name="time" id="due_time">
           </div>
         </div>
+      </div>
       
-        <div id="estimated">
-          <p>Time to complete</p>
+      <div id="details">
+        <p>Details</p>
+        <input type="text" id="detail" name="details">
+      </div>
       
-          <div id="estimate">
+      <div id="tags">
+        <p>Type</p>
+        <div id="tasktype">
+          <select name="type" id="taskSelector">
+            <option value="">Select a type</option>
+            <option value="Lecture">Lecture</option>
+            <option value="Meeting">Meeting</option>
+            <option value="Reading">Reading</option>
+          </select>
+        </div>
+      </div>
+      
+      <div id="estimated">
+        <p>Time to complete</p>
+  
+        <div id="estimate">
           
           <div id="hour"> 
-          <label for="hour">Hour(s)</label><br>
-          <input type="number" id="e_hour" name="hours"><br>
+            <label for="hour">Hour(s)</label><br>
+            <input type="number" id="e_hour" name="hours"><br>
           </div>
       
           <div id="min"> 
-          <label for="min">Minute(s)</label><br>
-          <input type="number" id="e_min" name="mins">
+            <label for="min">Minute(s)</label><br>
+            <input type="number" id="e_min" name="mins">
           </div>
         </div>
-        </div>
+      </div>
       
         <div id="priority">
-        <p>Task Priority</p>
-          <select name="prority" id="priorityInput">
-            <option value="">Select one</option>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-          </select>
+          <p>Task Priority</p>
+            <select name="prority" id="priorityInput">
+              <option value="">Select one</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
         </div>
       
         <div id="create_delate">
-          
           <div id="Delate">
-            <button type="submit" id="cancel">DELATE</button>
+            <button type="submit" id="cancel">CANCEL</button>
           </div>
           
           <div id="Create">
@@ -246,13 +234,8 @@
           </div>
         
         </div>
-        </div>
-        </form>
-      
-        <!-- <div id="taskCard">
-          <ul>
-          </ul>
-        </div> -->
+      </div>
+    </form>
 
 
 

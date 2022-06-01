@@ -22,6 +22,12 @@ h2{
     border-color:#C4C4C4;
 }
 
+#sound{
+    color:#C84C48;
+    background-color: white;
+    border:none;
+}
+
 #check{
     // left: 90%;
     width: 100px;
@@ -90,4 +96,15 @@ h2{
     color:white;
     border-radius: 25px;
     padding:10px;
+}
+
+@media only screen and (max-width:700px){
+
+    #search_bar{
+      width: 400px;
+    }
+
+    #searchbox{
+        margin-bottom: 5px;
+    }
 }

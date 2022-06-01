@@ -14,14 +14,6 @@
     visibility: visible;
 }
 
-
-// #pomodorotimer > p{
-//     display:inline;
-//     font-size: 35px;
-//     margin: -2px 5px;
-//     margin-right: 30px;
-// }
-
 #pomodorotimer_1 > p{
     // display:inline;
     position:absolute;
@@ -32,12 +24,6 @@
     margin: auto;
     text-align: center;
 }
-
-// .timeCount{
-//     display:inline;
-//     text-align: center;
-//     font-size: 50px;
-// }
 
 #times_1{
     // display:inline;
@@ -71,7 +57,7 @@
     display:flex;
     position:absolute;
     width: 250px;
-    height: 350px;
+    height: 250px;
     left: 50%;
     top:10px;
     background: #FDF5F2;
@@ -94,7 +80,7 @@
   
   #break{
     position: absolute;
-    left:75px;
+    left:85px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -103,28 +89,14 @@
     color: #000000;
   }
   
-  #times{
-  /*   display:flex; */
-    position:relative;
-    height:30px;
-    width:30px;
-    left:115px;
-    top: 170px;
-    background-color: #C84C48;
-    border: none;
-    border-radius: 5px;
-    color:white;
-    font-size:20px;
-  }
-  
   #cycle{
     position: absolute;
-    left:150px;
+    left:120px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height: 450px;
+    line-height: 300px;
     color: #000000;
   }
   
@@ -132,14 +104,14 @@
     position:absolute;
     height:100px; 
     width:100px;
-    left:50px;
-    top:175px;
+    left:30px;
+    top:100px;
   }
   
   #start{
     position:relative;
-    left:0px;
-    top: 260px;
+    left:20px;
+    top: 200px;
     width:100px;
     height:30px;
     background-color: #C84C48;
@@ -151,8 +123,8 @@
   
   #giveup{
     position:relative;
-    left:15px;
-    top: 260px;
+    left:30px;
+    top: 200px;
     width:100px;
     height:30px;
     background-color: #C84C48;
@@ -165,4 +137,38 @@
   #fullScreen{
     display:inline;
     float:right;
+  }
+
+
+  @media only screen and (max-width:700px){
+    #pomodorotimer_1{
+      position:fixed;
+  }
+
+  #pomodorotimer{
+    position:fixed;
+      left: 50%;
+      top:-20px;
+      background: #FDF5F2;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 0px 10px 10px;
+      z-index: 1;
+      visibility: hidden;
+  }
+
+  #pomodorotimer_1 > p{
+    font-size: 30px;
+    height:0px;
+    top:0px;
+}
+
+#pomodorotimer_1{
+  height:60px;
+  width:220px;
+}
+
+#break{
+  font-size: 25px;
+}
+
   }

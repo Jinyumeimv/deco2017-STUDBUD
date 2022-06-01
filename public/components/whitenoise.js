@@ -1,3 +1,4 @@
+// Build an array to get the music name, image, and sound. It can make the code easier.
 let AllWhiteNoise = [
     {
       name:"Falme",
@@ -21,11 +22,13 @@ let AllWhiteNoise = [
 let box = document.getElementById("whitenoise");
 let size = document.getElementById("big");
 
+// Add the click function to the open in full button.
 size.addEventListener("click", function(){
     console.log("lala");
     box.classList.toggle("active");
 });
 
+// get the elements in the HTML
 const whiteNoise = document.querySelector("#whitenoise");
 whiteNoiseImg = whiteNoise.querySelector("#img_area > img");
 whiteNoiseName = whiteNoise.querySelector("#whitename");
@@ -36,14 +39,18 @@ nextBtn = whiteNoise.querySelector("#next");
 progressArea = whiteNoise.querySelector("#progress");
 progressBar = whiteNoise.querySelector("#progressbar");
 
-let musicIndex = 2;
+// Set the number of the music, it can be identify and play the relavent white noise
+let musicIndex = 1;
 
 //   let AllWhiteNoise;
 
+// Load the whitenoise
 window.addEventListener("load", ()=>{
   loadMusic(musicIndex);
 })
 
+// Select the music from the array, the array is [0, 1, 2], so if I want to choose I need to set the white noise index to minus 1。
+// And get the value from array property
 function loadMusic(indexNum){
   whiteNoiseName.innerText = AllWhiteNoise[indexNum-1].name;
   whiteNoiseImg.src = AllWhiteNoise[indexNum-1].img;
@@ -62,6 +69,7 @@ function nextWhiteNoise(){
   playMusic();
 };
 
+// Changing the play and pause buttons after clicking, and clicking the play button can play the white noise and the pause button can stop the white noise.
 function playMusic(){
   whiteNoise.classList.add("paused");
   playBtn.querySelector("i").innerText = "pause_circle";
@@ -79,6 +87,7 @@ playBtn.addEventListener("click", ()=>{
   isWhiteNoisePaused ? pauseMusic() : playMusic();
 });
 
+// Add the next and previous button, after click can change the white noise
 previousBtn.addEventListener("click", ()=>{
   previousWhiteNoise();
 });
@@ -87,6 +96,8 @@ nextBtn.addEventListener("click", ()=>{
   nextWhiteNoise();
 });
 
+// make the progress bar and duration time can be dragged, but I'm not achieving it.
+// Using meth to count the duration and the time.
 whiteNoiseSound.addEventListener("timeupdate", (e)=>{
   console.log(e);
   const currentTime = e.target.currentTime;

@@ -1,12 +1,12 @@
 #spopup{
     background-color: #FDF5F2;
     position: absolute;
-    top: 430px; 
-    left: 290px;
+    top: 520px; 
+    left:280px;
     z-index: 2;
     border-radius: 5px;
     visibility: hidden;
-    width:280px;
+    width:300px;
 }
 
 #spopup.active{
@@ -32,6 +32,7 @@
     border-radius: 5px;
     font-size: 30px;
     margin-bottom: 20px;
+    margin-right: 25px;
 }
 
 #stopwatch_start{

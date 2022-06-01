@@ -8,7 +8,18 @@
   display: grid;
 }
 
+@media only screen and (max-width: 700px) {
+  .container {
+    grid-template-areas: "task-list task-list task-list"
+                         "task-list task-list task-list"
+                         "navigation navigation navigation";
+    display: grid;
+  }
+}
+
 nav {
+  align-items: center;
+  margin: 5px;
   display: flex;
 }
 
@@ -16,6 +27,13 @@ nav {
   color: #fff;
   background-color: #c84c48;
   grid-area: navigation;
+}
+
+#logo > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 0%;
+  margin: 25px 25px 25px 80px;
 }
 
 .navigation > ul {
@@ -39,11 +57,6 @@ li a:hover {
   border-radius: 30px;
 }
 
-.navigation > h1 {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
 .navigation > #stopWatch {
   cursor: pointer;
   color: #fff;
@@ -61,6 +74,41 @@ li a:hover {
   color: #fff;
 }
 
+@media only screen and (max-width: 700px) {
+  .navigation {
+    height: 60px;
+    width: 520px;
+    position: fixed;
+    top: 600px;
+  }
+
+  .navigation > h1 {
+    display: none;
+  }
+
+  .navigation > ul {
+    margin-top: 5px;
+  }
+
+  #nav, #nav li {
+    display: flex;
+  }
+
+  #nav li a:hover {
+    background-color: #c84c48;
+  }
+
+  .navigation {
+    justify-content: space-evenly;
+    display: flex;
+  }
+
+  .navigation > #stopWatch {
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+}
+
 .task-list {
   grid-area: task-list;
 }
@@ -68,16 +116,22 @@ li a:hover {
 h2 {
   color: #c84c48;
   margin: 1%;
-  font-size: 40px;
+  font-size: 30px;
   display: inline-block;
 }
 
+#column_box, #column_name {
+  justify-content: flex-start;
+  margin: -10px;
+  display: flex;
+}
+
 .box1, .box2, .box3 {
-  width: 32%;
+  width: 370px;
   height: 550px;
   border-radius: 0% 0% 15px 15px;
-  margin: 0 .5% .5%;
-  display: inline-block;
+  margin-left: 15px;
+  margin-right: 3px;
 }
 
 .box1 {
@@ -90,15 +144,16 @@ h2 {
 
 .box3 {
   opacity: .2;
-  background-color: #f77f0033;
+  background-color: #f77f0099;
 }
 
 .box4, .box5, .box6 {
-  width: 32%;
-  height: 60px;
+  width: 370px;
+  height: 50px;
   border-radius: 15px 15px 0% 0%;
-  margin: .5% .5% 0;
-  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 3px;
 }
 
 .box4 p, .box5 p, .box6 p {
@@ -134,6 +189,17 @@ h2 {
   border: none;
 }
 
+@media only screen and (max-width: 700px) {
+  .box1, .box2, .box3 {
+    width: 500px;
+    height: 400px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
 h2 {
   color: #c84c48;
   margin: 1%;
@@ -155,6 +221,12 @@ h2 {
   height: 50px;
   border-color: #c4c4c4;
   border-radius: 10px 0 0 10px;
+}
+
+#sound {
+  color: #c84c48;
+  background-color: #fff;
+  border: none;
 }
 
 #check {
@@ -209,15 +281,25 @@ h2 {
   font-size: 18px;
 }
 
+@media only screen and (max-width: 700px) {
+  #search_bar {
+    width: 400px;
+  }
+
+  #searchbox {
+    margin-bottom: 5px;
+  }
+}
+
 #spopup {
   z-index: 2;
   visibility: hidden;
-  width: 280px;
+  width: 300px;
   background-color: #fdf5f2;
   border-radius: 5px;
   position: absolute;
-  top: 430px;
-  left: 290px;
+  top: 520px;
+  left: 280px;
 }
 
 #spopup.active {
@@ -241,6 +323,7 @@ h2 {
   border: none;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-right: 25px;
   font-size: 30px;
 }
 
@@ -311,7 +394,7 @@ button:hover {
 
 #pomodorotimer {
   width: 250px;
-  height: 350px;
+  height: 250px;
   z-index: 1;
   visibility: hidden;
   background: #fdf5f2;
@@ -342,20 +425,7 @@ button:hover {
   font-weight: 400;
   line-height: 200px;
   position: absolute;
-  left: 75px;
-}
-
-#times {
-  height: 30px;
-  width: 30px;
-  color: #fff;
-  background-color: #c84c48;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  position: relative;
-  top: 170px;
-  left: 115px;
+  left: 85px;
 }
 
 #cycle {
@@ -364,17 +434,17 @@ button:hover {
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
-  line-height: 450px;
+  line-height: 300px;
   position: absolute;
-  left: 150px;
+  left: 120px;
 }
 
 #tomato_img {
   height: 100px;
   width: 100px;
   position: absolute;
-  top: 175px;
-  left: 50px;
+  top: 100px;
+  left: 30px;
 }
 
 #start {
@@ -386,8 +456,8 @@ button:hover {
   border-radius: 5px;
   font-size: 20px;
   position: relative;
-  top: 260px;
-  left: 0;
+  top: 200px;
+  left: 20px;
 }
 
 #giveup {
@@ -399,8 +469,8 @@ button:hover {
   border-radius: 5px;
   font-size: 20px;
   position: relative;
-  top: 260px;
-  left: 15px;
+  top: 200px;
+  left: 30px;
 }
 
 #fullScreen {
@@ -408,8 +478,40 @@ button:hover {
   display: inline;
 }
 
+@media only screen and (max-width: 700px) {
+  #pomodorotimer_1 {
+    position: fixed;
+  }
+
+  #pomodorotimer {
+    z-index: 1;
+    visibility: hidden;
+    background: #fdf5f2;
+    border-radius: 0 0 10px 10px;
+    position: fixed;
+    top: -20px;
+    left: 50%;
+    box-shadow: 0 4px 4px #00000040;
+  }
+
+  #pomodorotimer_1 > p {
+    height: 0;
+    font-size: 30px;
+    top: 0;
+  }
+
+  #pomodorotimer_1 {
+    height: 60px;
+    width: 220px;
+  }
+
+  #break {
+    font-size: 25px;
+  }
+}
+
 #whitenoise_1 {
-  height: 40px;
+  height: 50px;
   width: 300px;
   z-index: 2;
   background-color: #fdf5f2;
@@ -418,7 +520,7 @@ button:hover {
   display: inline-block;
   position: absolute;
   top: 0%;
-  left: 75%;
+  left: 70%;
 }
 
 #whitenoise_1 p {
@@ -429,15 +531,6 @@ button:hover {
 
 #whitenoise.active {
   visibility: visible;
-}
-
-p > img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 2%;
-  display: inline;
-  transform: translate(0%, 20%);
 }
 
 #whitenoise_1 > button {
@@ -454,17 +547,18 @@ p > img {
 }
 
 #whitenoise {
-  height: 350px;
+  height: 400px;
   width: 250px;
-  z-index: 2;
+  z-index: 1;
   visibility: hidden;
   background-color: #fdf5f2;
   border-radius: 5px;
   padding: 5px 30px;
   display: inline-block;
   position: absolute;
-  top: 5%;
-  left: 75%;
+  top: 50px;
+  left: 70%;
+  box-shadow: 0 4px 4px #00000040;
 }
 
 #top_bar, #time, #buttons {
@@ -523,8 +617,40 @@ p > img {
   margin-left: 25px;
 }
 
-#like:hover, #previous:hover, #play:hover, #next:hover, #mode:hover {
+#previous:hover, #play:hover, #next:hover {
   color: #c84c48;
+}
+
+@media only screen and (max-width: 700px) {
+  #whitenoise_1 {
+    height: 40px;
+    width: 510px;
+    position: fixed;
+    top: 550px;
+    left: 15px;
+  }
+
+  #whitenoise_1 > button {
+    float: right;
+  }
+
+  #whitenoise {
+    height: 400px;
+    width: 460px;
+    position: fixed;
+    top: 150px;
+    left: 15px;
+  }
+
+  #img_area {
+    margin: 5px 25%;
+  }
+
+  #img_area > img {
+    height: 220px;
+    width: 50%;
+    align-items: center;
+  }
 }
 
 #taskform {
@@ -538,6 +664,7 @@ p > img {
   position: absolute;
   top: 100px;
   left: 450px;
+  box-shadow: 0 4px 4px #00000040;
 }
 
 #taskform.active {
@@ -604,7 +731,7 @@ input[type="number"] {
   font-size: 18px;
 }
 
-#priority > select {
+#priorityInput, #taskSelector {
   width: 310px;
   height: 40px;
 }
@@ -644,23 +771,6 @@ input[type="number"] {
   background-color: #ec6e55;
 }
 
-#add {
-  width: 40px;
-  color: #fff;
-  cursor: pointer;
-  background-color: #c84c48;
-  border: none;
-  border-radius: 20px;
-  margin-right: 5px;
-  padding: 5px;
-  font-size: 20px;
-  display: inline;
-}
-
-#add:hover {
-  background-color: #932825;
-}
-
 #create_delate {
   justify-content: flex-end;
   display: flex;
@@ -695,7 +805,7 @@ input[type="number"] {
 }
 
 #taskCard ul {
-  margin-left: -15px;
+  margin-left: -20px;
   list-style-type: none;
 }
 
@@ -707,10 +817,21 @@ input[type="number"] {
   background-color: #fff;
   border-left: 5px solid #f67c63;
   border-radius: 8px;
+  padding-bottom: 10px;
   padding-left: 10px;
   list-style-type: none;
   position: relative;
   box-shadow: 0 4px 4px #00000040;
+}
+
+#card.dragging {
+  opacity: .4;
+  background-color: #2c2b2b;
+}
+
+#card > p {
+  margin-bottom: 3px;
+  font-size: 10px;
 }
 
 #delate {
@@ -722,14 +843,11 @@ input[type="number"] {
   border-radius: 5px;
 }
 
-h1 {
+#itemname {
   color: #000;
   margin-bottom: 0;
+  font-size: 30px;
   font-weight: bold;
-}
-
-p {
-  font-size: 15px;
 }
 
 #details {
@@ -752,7 +870,89 @@ p {
 
 .remove {
   float: right;
+  color: #fff;
+  background-color: #8f8f8f;
+  border: none;
+  border-radius: 5px;
   margin-right: 10px;
+}
+
+#types {
+  color: #fff;
+  width: 65px;
+  background-color: #f67c63;
+  border-radius: 15px;
+  margin: 5px 0;
+  padding-left: 5px;
+}
+
+#priority {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+  #taskform {
+    height: 420px;
+    width: 420px;
+    top: 100px;
+    left: 50px;
+  }
+
+  #functionName {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 10px;
+  }
+
+  div {
+    margin: 5px;
+  }
+
+  input[type="text"] {
+    width: 100px;
+    height: 20px;
+    font-size: 18px;
+  }
+
+  input[type="number"] {
+    width: 100px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  #priorityInput, #taskSelector {
+    width: 100px;
+    height: 20px;
+  }
+
+  input[type="date"], input[type="time"], input[type="number"], input[type="text"], select {
+    width: 100px;
+  }
+
+  #create, #cancel {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  #card {
+    height: 100px;
+    width: 120px;
+    border-radius: 4px;
+  }
+
+  #card > p {
+    margin-bottom: 0;
+    font-size: 5px;
+  }
+
+  #itemname {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
