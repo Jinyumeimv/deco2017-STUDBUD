@@ -12,6 +12,7 @@ nav{
 }
 
 #logo > img{
+    display:inline;
     width:80px;
     height:80px;
     border-radius: 0%;
@@ -67,9 +68,9 @@ li a:hover{
         width:520px;
     }
 
-    .navigation > h1{
-        display:none;
-    }
+    // .navigation > h1{
+    //     display:none;
+    // }
 
     .navigation > ul{
         margin-top:5px;
@@ -96,5 +97,9 @@ li a:hover{
     .navigation > #stopWatch{
         margin-top: 0%;
         margin-left:0%;
+    }
+
+    #logo > img{
+        display:none;
     }
 }

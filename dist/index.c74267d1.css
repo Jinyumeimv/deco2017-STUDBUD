@@ -34,6 +34,7 @@ nav {
   height: 80px;
   border-radius: 0%;
   margin: 25px 25px 25px 80px;
+  display: inline;
 }
 
 .navigation > ul {
@@ -82,10 +83,6 @@ li a:hover {
     top: 600px;
   }
 
-  .navigation > h1 {
-    display: none;
-  }
-
   .navigation > ul {
     margin-top: 5px;
   }
@@ -106,6 +103,10 @@ li a:hover {
   .navigation > #stopWatch {
     margin-top: 0%;
     margin-left: 0%;
+  }
+
+  #logo > img {
+    display: none;
   }
 }
 
@@ -323,7 +324,7 @@ h2 {
   border: none;
   border-radius: 5px;
   margin-bottom: 20px;
-  margin-right: 25px;
+  margin-right: 5px;
   font-size: 30px;
 }
 
@@ -340,6 +341,13 @@ button:hover {
   color: #000;
   margin-left: 10px;
   font-size: 55px;
+}
+
+@media only screen and (max-width: 700px) {
+  #spopup {
+    top: 420px;
+    left: 280px;
+  }
 }
 
 #pomodorotimer_1 {
