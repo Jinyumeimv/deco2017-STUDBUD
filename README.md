@@ -6,6 +6,12 @@ Yu Jin yjin3411
 ![Create a new task popup](/public/readme_img/page3.jpg)
 ![Dictionary functuon](/public/readme_img/page4.jpg)
 
+## A3 Web app prototype
+![Homepage tasklist](/public/readme_img/page11.png)
+![Pomodoro, white noise, and stopwatch popup](/public/readme_img/page12.png)
+![Create a new task popup](/public/readme_img/page13.png)
+![Dictionary functuon](/public/readme_img/page14.png)
+
 ## Design principles
 ### Similarity
 >People associate have the same characteristics elements with the same functions or features, such as the same shape, colour, size, etc. (Harley, 2020). The icons on the navigation bar are the same size and the same visuals which from google material design. That can convey these two elements has identical features which can navigate the user to that page.
@@ -38,7 +44,7 @@ Yu Jin yjin3411
 
 
 ## Reflection
->I have some functions that have not been achieved shuch as drag and drop the task card to the other columns function and topthe card feathres. I need have a futher learning on java script and think more deeper. 
+>I have some functions that have not been achieved such as drag and drop the task card to the other columns function and top the card features. I need to have further learned Java script and think deeper. Through this assignment, I deepened my understanding of HTML and CSS and learned how Java script works. For unimplemented code, go deeper into the winter vacation.
 
 
 ## Reference
@@ -62,7 +68,8 @@ W3school. (n.d.). onclick Event. Retrieved from www.w3schools.com website: https
 
 W3school. (2019). onload Event. Retrieved from W3schools.com website: https://www.w3schools.com/jsref/event_onload.asp.
 
-W3school. (n.d.). HTML DOM Element innerText Property. Retrieved June 2, 2022, from www.w3schools.com website: https://www.w3schools.com/jsref/prop_node_innertext.asp.
+W3school. (n.d.). HTML DOM Element innerText Property. Retrieved May 22, 2022, from www.w3schools.com website: https://www.w3schools.com/jsref/prop_node_innertext.asp.
 
+Cosgrove, D. (2022). Local storage DEMO.  Retrieved May,28, 2022, from replit: https://replit.com/@drewcosgrove/Local-Storage-Demo.
 
 
