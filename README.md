@@ -1,5 +1,9 @@
 # deco2017-STUDBUD
 Yu Jin yjin3411
+
+## Introduction
+>The purposes of Studbud is to help remote learning students to study more efficiency. Therefore, my target audience is foreign students who are studying remotely in their countries. Because of the time zones, they must attend classes and submit assignments according to Australian time. They must account for jet lag, which could result in missing examinations or classes. Moreover, remote learning creates communication barriers and the lack of a learning environment which reduces the efficiency of study.
+
 ## A2 Mockup
 ![Homepage tasklist](/public/readme_img/page1.jpg)
 ![Pomodoro, white noise, and stopwatch popup](/public/readme_img/page2.jpg)
