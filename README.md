@@ -52,6 +52,8 @@ Yu Jin yjin3411
 
 
 ## Reference
+Alexander. (2021, June 22). Fire Flame Sound Effect | Free Sound Clips | Ambient Sounds. Retrieved May 22, 2022, from Free Sounds Library website: https://www.freesoundslibrary.com/fire-flame-sound-effect/.
+
 MDN. (2022, May 13). display - CSS: Cascading Style Sheets | MDN. Retrieved May 10, 2022, from Mozilla.org website: https://developer.mozilla.org/en-US/docs/Web/CSS/display.
 
 MDN. (n.d.). position. Retrieved May 12, 2022, from MDN Web Docs website: https://developer.mozilla.org/en-US/docs/Web/CSS/position.
@@ -63,6 +65,10 @@ MDN. (n.d.). Element.classList - Web APIs | MDN. Retrieved from developer.mozill
 Obaseki, N. (2020, December 29). localStorage in JavaScript: A complete guide. Retrieved from LogRocket Blog website: https://blog.logrocket.com/localstorage-javascript-complete-guide/.
 
 Okere, C. (2021, January 19). How to Manipulate the DOM - the Ultimate Beginner’s Guide. Retrieved May 23, 2022, from freeCodeCamp.org website: https://www.freecodecamp.org/news/how-to-manipulate-the-dom-beginners-guide/.
+
+Spanac. (2021, September 4). Small Sea Waves Crashing Sound Effect | Ambient Sounds. Retrieved May 22, 2022, from Free Sounds Library website: https://www.freesoundslibrary.com/small-sea-waves-crashing-sound-effect/.
+
+Spanac. (2022, March 9). Rain Ambience | Ambient Sounds. Retrieved May 22, 2022, from Free Sounds Library website: https://www.freesoundslibrary.com/rain-ambience/.
 
 Parcel. (n.d.). JavaScript. Retrieved May 25, 2022, from parceljs.org website: https://parceljs.org/languages/javascript/#url-dependencies.
 
@@ -76,4 +82,7 @@ W3school. (n.d.). HTML DOM Element innerText Property. Retrieved May 22, 2022, f
 
 Cosgrove, D. (2022). Local storage DEMO.  Retrieved May,28, 2022, from replit: https://replit.com/@drewcosgrove/Local-Storage-Demo.
 
+Material icons. (2022). Google fonts. Retrieved May, 10, 2022, from https://fonts.google.com/icons.
+
+ 
 
