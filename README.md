@@ -39,3 +39,30 @@ Yu Jin yjin3411
 
 ## Reflection
 >I have some functions that have not been achieved shuch as drag and drop the task card to the other columns function and topthe card feathres. I need have a futher learning on java script and think more deeper. 
+
+
+## Reference
+MDN. (2022, May 13). display - CSS: Cascading Style Sheets | MDN. Retrieved May 10, 2022, from Mozilla.org website: https://developer.mozilla.org/en-US/docs/Web/CSS/display.
+
+MDN. (n.d.). position. Retrieved May 12, 2022, from MDN Web Docs website: https://developer.mozilla.org/en-US/docs/Web/CSS/position.
+
+MDN. (n.d.). EventTarget.addEventListener() | MDN. Retrieved May 18, 2022, from developer.mozilla.org website: https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener.
+
+MDN. (n.d.). Element.classList - Web APIs | MDN. Retrieved from developer.mozilla.org website: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList.
+
+Obaseki, N. (2020, December 29). localStorage in JavaScript: A complete guide. Retrieved from LogRocket Blog website: https://blog.logrocket.com/localstorage-javascript-complete-guide/.
+
+Okere, C. (2021, January 19). How to Manipulate the DOM - the Ultimate Beginner’s Guide. Retrieved May 23, 2022, from freeCodeCamp.org website: https://www.freecodecamp.org/news/how-to-manipulate-the-dom-beginners-guide/.
+
+Parcel. (n.d.). JavaScript. Retrieved May 25, 2022, from parceljs.org website: https://parceljs.org/languages/javascript/#url-dependencies.
+
+W3School. (n.d.). jQuery Tutorial. Retrieved May 20, 2022, from w3school.com: https://www.w3schools.com/jquery/default.asp.
+
+W3school. (n.d.). onclick Event. Retrieved from www.w3schools.com website: https://www.w3schools.com/jsref/event_onclick.asp.
+
+W3school. (2019). onload Event. Retrieved from W3schools.com website: https://www.w3schools.com/jsref/event_onload.asp.
+
+W3school. (n.d.). HTML DOM Element innerText Property. Retrieved June 2, 2022, from www.w3schools.com website: https://www.w3schools.com/jsref/prop_node_innertext.asp.
+
+
+

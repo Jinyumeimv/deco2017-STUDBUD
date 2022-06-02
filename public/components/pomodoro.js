@@ -25,7 +25,7 @@ start.addEventListener('click', function(){
   if(startTimer === undefined){
     startTimer = setInterval(timer,1000)
   }else{
-  alert("Timer is already running");
+  alert("Timer is running");
   console.log(lala);
   }
 })
@@ -52,8 +52,8 @@ function timer(){
   }
 
   if(focusMins.innerText == 0 && focusSec.innerText == 0){
-       breakSec.innerText--;
-    }else if(breakMins.innertext != 0 && breakSec.innerText == 0){
+    breakSec.innerText--;
+  }else if(breakMins.innertext != 0 && breakSec.innerText == 0){
     breakSec.innerText = 59;
     breakMins.innerText--;
   }
@@ -69,7 +69,6 @@ function timer(){
   cycles.innerText ++;
 }
 }
-
 
 
 function stopInterval(){

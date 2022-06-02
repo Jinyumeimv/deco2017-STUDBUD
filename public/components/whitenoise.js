@@ -1,4 +1,5 @@
 // Build an array to get the music name, image, and sound. It can make the code easier.
+// Based on the property of the parcel, I cannot get images and music based on the sample way, therefore, I use a new URL('src', import.meta.url) to find my images and sounds.
 let AllWhiteNoise = [
     {
       name:"Falme",
@@ -76,16 +77,17 @@ function playMusic(){
   whiteNoiseSound.play();
 }
 
+playBtn.addEventListener("click", ()=>{
+  const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
+  isWhiteNoisePaused ? pauseMusic() : playMusic();
+});
+
 function pauseMusic(){
   whiteNoise.classList.remove("paused");
   playBtn.querySelector("i").innerText = "play_circle";
   whiteNoiseSound.pause();
 }
 
-playBtn.addEventListener("click", ()=>{
-  const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
-  isWhiteNoisePaused ? pauseMusic() : playMusic();
-});
 
 // Add the next and previous button, after click can change the white noise
 previousBtn.addEventListener("click", ()=>{
@@ -105,6 +107,7 @@ whiteNoiseSound.addEventListener("timeupdate", (e)=>{
   let progressWidth = (currentTime / duration)*100;
   progressBar.style.width = `${progressWidth}%`;
 });
+
 
 // I want to adding some js to adjust the progress bar, but I didn't make it.
 progressArea.addEventListener("click", (e)=>{

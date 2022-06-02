@@ -541,30 +541,31 @@ popup.addEventListener("click", function() {
     stopWatch.classList.toggle("active");
 });
 window.onload = function() {
-    var seconds = 00;
     var secs = 00;
     var tens = 00;
-    var actualTens = document.getElementById("tens");
     var actualSecs = document.getElementById("seconds");
+    var actualTens = document.getElementById("tens");
     var buttonStart = document.getElementById('stopwatch_start');
     var buttonStop = document.getElementById('stopwatch_stop');
     var buttonReset = document.getElementById('stopwatch_reset');
     var Interval;
+    // Start the stopwatch through click the start button
     buttonStart.onclick = function() {
         clearInterval(Interval);
         Interval = setInterval(startTimer, 10);
         console.log(a);
     };
+    // End the stopwatch through click the stop button
     buttonStop.onclick = function() {
         clearInterval(Interval);
     };
     // reset the function can make the stopwatch back to the initial and the stopwatch can be restarted.
     buttonReset.onclick = function() {
         clearInterval(Interval);
-        tens = "00";
         secs = "00";
-        actualTens.innerHTML = tens;
+        tens = "00";
         actualSecs.innerHTML = secs;
+        actualTens.innerHTML = tens;
     };
     function startTimer() {
         tens++;
@@ -603,7 +604,7 @@ var startTimer;
 start.addEventListener('click', function() {
     if (startTimer === undefined) startTimer = setInterval(timer, 1000);
     else {
-        alert("Timer is already running");
+        alert("Timer is running");
         console.log(lala);
     }
 });
@@ -644,6 +645,7 @@ function stopInterval() {
 
 },{}],"h7WhB":[function(require,module,exports) {
 // Build an array to get the music name, image, and sound. It can make the code easier.
+// Based on the property of the parcel, I cannot get images and music based on the sample way, therefore, I use a new URL('src', import.meta.url) to find my images and sounds.
 let AllWhiteNoise = [
     {
         name: "Falme",
@@ -708,15 +710,15 @@ function playMusic() {
     playBtn.querySelector("i").innerText = "pause_circle";
     whiteNoiseSound.play();
 }
+playBtn.addEventListener("click", ()=>{
+    const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
+    isWhiteNoisePaused ? pauseMusic() : playMusic();
+});
 function pauseMusic() {
     whiteNoise.classList.remove("paused");
     playBtn.querySelector("i").innerText = "play_circle";
     whiteNoiseSound.pause();
 }
-playBtn.addEventListener("click", ()=>{
-    const isWhiteNoisePaused = whiteNoise.classList.contains("paused");
-    isWhiteNoisePaused ? pauseMusic() : playMusic();
-});
 // Add the next and previous button, after click can change the white noise
 previousBtn.addEventListener("click", ()=>{
     previousWhiteNoise();
@@ -807,6 +809,8 @@ btn.addEventListener("click", ()=>{
     ).then((data)=>{
         console.log(data);
         // copy and paste the HTML code, and use jQuery to get the information from API.
+        // Make the code clearer, simpler and avoid the complexity of the code.
+        // Through the developer mode of google, it is easy to find the content from the API.
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
@@ -822,7 +826,7 @@ btn.addEventListener("click", ()=>{
         </div>`;
         sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound);
-        // Set the onclick function to the sound button
+        // Set the onclick function to the sound button, after click the sound button, user can get pronunciation.
         document.getElementById('sound').onclick = playSound;
     });
 });

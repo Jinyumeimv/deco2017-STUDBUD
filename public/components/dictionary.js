@@ -15,6 +15,8 @@ btn.addEventListener("click", () => {
     .then((data) =>{
         console.log(data);
         // copy and paste the HTML code, and use jQuery to get the information from API.
+        // Make the code clearer, simpler and avoid the complexity of the code.
+        // Through the developer mode of google, it is easy to find the content from the API.
         result.innerHTML = `
         <p id="word">${inputWord}</p>
         <p id="property">${data[0].meanings[0].partOfSpeech}</p>
@@ -30,7 +32,7 @@ btn.addEventListener("click", () => {
         </div>`;
         sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound);
-    // Set the onclick function to the sound button
+    // Set the onclick function to the sound button, after click the sound button, user can get pronunciation.
         document.getElementById('sound').onclick = playSound;
 
     });

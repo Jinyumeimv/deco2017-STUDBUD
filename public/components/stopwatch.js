@@ -9,34 +9,36 @@ popup.addEventListener("click", function(){
 });
 
 window.onload = function () {
-    var seconds = 00;
     var secs = 00;
-    var tens = 00; 
-    var actualTens = document.getElementById("tens")
-    var actualSecs = document.getElementById("seconds")
+    var tens = 00;  
+
+    var actualSecs = document.getElementById("seconds");
+    var actualTens = document.getElementById("tens");
+   
     var buttonStart = document.getElementById('stopwatch_start');
     var buttonStop = document.getElementById('stopwatch_stop');
     var buttonReset = document.getElementById('stopwatch_reset');
     var Interval ;
   
+    // Start the stopwatch through click the start button
     buttonStart.onclick = function() {
-      
       clearInterval(Interval);
-       Interval = setInterval(startTimer, 10);
-       console.log(a);
+      Interval = setInterval(startTimer, 10);
+      console.log(a);
     }
     
-      buttonStop.onclick = function() {
-         clearInterval(Interval);
+    // End the stopwatch through click the stop button
+    buttonStop.onclick = function() {
+     clearInterval(Interval);
     }
     
   // reset the function can make the stopwatch back to the initial and the stopwatch can be restarted.
     buttonReset.onclick = function() {
        clearInterval(Interval);
-        tens = "00";
         secs = "00";
-        actualTens.innerHTML = tens;
+        tens = "00";
         actualSecs.innerHTML = secs;
+        actualTens.innerHTML = tens;
     }
     
      
